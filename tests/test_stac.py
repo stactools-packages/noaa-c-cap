@@ -1,6 +1,6 @@
 import unittest
 
-from stactools.ephemeral import stac
+from stactools.noaa_c_cap import stac
 
 
 class StacTest(unittest.TestCase):

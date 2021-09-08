@@ -1,4 +1,4 @@
-name: stactools-ephemeral
+name: stactools-noaa-c-cap
 channels:
   - conda-forge
   - defaults
