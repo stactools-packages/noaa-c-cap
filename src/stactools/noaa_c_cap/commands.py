@@ -31,12 +31,8 @@ def create_noaa_c_cap_command(cli):
             destination (str): An HREF for the Collection JSON
         """
         collection = stac.create_collection()
-
         collection.set_self_href(destination)
-
         collection.save_object()
-
-        return None
 
     @noaa_c_cap.command("create-item", short_help="Create a STAC item")
     @click.argument("source")
@@ -49,10 +45,7 @@ def create_noaa_c_cap_command(cli):
             destination (str): An HREF for the STAC Collection
         """
         item = stac.create_item(source)
-
         item.save_object(dest_href=destination)
-
-        return None
 
     @noaa_c_cap.command(
         "download",
