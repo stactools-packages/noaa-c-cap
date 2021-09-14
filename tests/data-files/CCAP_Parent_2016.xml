@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inport-metadata xmlns:xs="http://www.w3.org/2001/XMLSchema" version="0.9">
+    <item-identification>
+        <catalog-item-id>48329</catalog-item-id>
+        <title>NOAA's Coastal Change Analysis Program (C-CAP) 2001 to 2016 Regional Land Cover Change Data - Coastal United States</title>
+        <short-name>CCAP_2001_2016_Parent</short-name>
+        <catalog-item-type>Data Set</catalog-item-type>
+        <metadata-workflow-state ccs-id="10">Withdrawn</metadata-workflow-state>
+        <parent-catalog-item-id>47841</parent-catalog-item-id>
+        <parent-title>C-CAP</parent-title>
+        <parent-catalog-item-type>Project</parent-catalog-item-type>
+        <status>In Work</status>
+        <publication-date>2016-10-03</publication-date>
+        <abstract>The NOAA Coastal Change Analysis Program (C-CAP) produces national standardized land cover and change products for the coastal regions of the U.S.  C-CAP products inventory coastal intertidal areas, wetlands, and adjacent uplands with the goal of monitoring changes in these habitats, on a one-to-five year repeat cycle. The timeframe for this metadata is reported as 2001-2016 Era, but the actual dates of the Landsat imagery used to create the land cover may have been acquired a few years before or after each era.  These maps are developed utilizing Landsat Thematic Mapper imagery, and can be used to track changes in the landscape through time.  This trend information gives important feedback to managers on the success or failure of management policies and programs and aid in developing a scientific understanding of the Earth system and its response to natural and human-induced changes. This understanding allows for the prediction of impacts due to these changes and the assessment of their cumulative effects, helping coastal resource managers make more informed regional decisions. NOAA C-CAP is a contributing member to the Multi-Resolution Land Characteristics consortium and C-CAP products are included as the coastal expression of land cover within the National Land Cover Database.</abstract>
+        <purpose>C-CAP is dedicated to the development, distribution, and application of land cover and change data for the coastal regions of the U.S. This effort is being conducted in close coordination with state coastal management agencies, the interagency Multi-Resolution Land Characteristics (MRLC) consortium, and the National Land Cover Database (NLCD).
+Recommended Citation. NOAA Coastal Change Analysis Program (C-CAP) Regional Land Cover Database. Data collected 1995-present. Charleston, SC: National Oceanic and Atmospheric Administration (NOAA) Office for Coastal Management. Data accessed at coast.noaa.gov/landcover.</purpose>
+        <notes>11455</notes>
+    </item-identification>
+    <keywords>
+        <keyword>
+            <keyword-type>Theme</keyword-type>
+            <thesaurus>ISO 19115 Topic Category</thesaurus>
+            <keyword>imageryBaseMapsEarthCover</keyword>
+        </keyword>
+        <keyword>
+            <keyword-type>Theme</keyword-type>
+            <thesaurus>NASA/GCMD Earth Science Keywords</thesaurus>
+            <keyword>EARTH SCIENCE : Human Dimensions : Environmental Governance/Management : Land Management : Land Use/Land Cover Classification</keyword>
+        </keyword>
+        <keyword>
+            <keyword-type>Theme</keyword-type>
+            <thesaurus>NASA/GCMD Earth Science Keywords</thesaurus>
+            <keyword>EARTH SCIENCE : Land Surface : Land Use/Land Cover : Land Cover</keyword>
+        </keyword>
+        <keyword>
+            <keyword-type>Theme</keyword-type>
+            <thesaurus>NASA/GCMD Earth Science Keywords</thesaurus>
+            <keyword>EARTH SCIENCE : Land Surface : Land Use/Land Cover : Land Use Classes</keyword>
+        </keyword>
+        <keyword>
+            <keyword-type>Theme</keyword-type>
+            <keyword>CCAP</keyword>
+        </keyword>
+        <keyword>
+            <keyword-type>Theme</keyword-type>
+            <keyword>Coastal Change Analysis Program</keyword>
+        </keyword>
+        <keyword>
+            <keyword-type>Theme</keyword-type>
+            <keyword>Land Cover Analysis</keyword>
+        </keyword>
+        <keyword>
+            <keyword-type>Theme</keyword-type>
+            <keyword>Remotely Sensed Imagery/Photos</keyword>
+        </keyword>
+        <keyword>
+            <keyword-type>Theme</keyword-type>
+            <thesaurus>Global Change Master Directory (GCMD) Science Keywords</thesaurus>
+            <keyword>Earth Science &gt; Land Surface &gt; Land Use/Land Cover</keyword>
+        </keyword>
+        <keyword>
+            <keyword-type>Theme</keyword-type>
+            <thesaurus>Global Change Master Directory (GCMD) Science Keywords</thesaurus>
+            <keyword>Earth Science &gt; Land Surface &gt; Land Use/Land Cover &gt; Land Use/Land Cover Classification</keyword>
+        </keyword>
+        <keyword>
+            <keyword-type>Theme</keyword-type>
+            <thesaurus>Global Change Master Directory (GCMD) Instrument Keywords</thesaurus>
+            <keyword>Earth Remote Sensing Instruments &gt; Passive Remote Sensing &gt; Photon/Optical Detectors &gt; Cameras &gt; CAMERAS</keyword>
+        </keyword>
+        <keyword>
+            <keyword-type>Theme</keyword-type>
+            <thesaurus>Global Change Master Directory (GCMD) Platform Keywords</thesaurus>
+            <keyword>Earth Observation Satellites &gt; LANDSAT</keyword>
+        </keyword>
+        <keyword>
+            <keyword-type>Spatial</keyword-type>
+            <thesaurus>Global Change Master Directory (GCMD) Location Keywords</thesaurus>
+            <keyword>Continent &gt; North America &gt; United States Of America &gt; Michigan</keyword>
+        </keyword>
+        <keyword>
+            <keyword-type>Spatial</keyword-type>
+            <thesaurus>Global Change Master Directory (GCMD) Location Keywords</thesaurus>
+            <keyword>Continent &gt; North America &gt; United States Of America &gt; Minnesota</keyword>
+        </keyword>
+        <keyword>
+            <keyword-type>Spatial</keyword-type>
+            <thesaurus>Global Change Master Directory (GCMD) Location Keywords</thesaurus>
+            <keyword>Continent &gt; North America &gt; United States Of America &gt; Wisconsin</keyword>
+        </keyword>
+        <keyword>
+            <keyword-type>Spatial</keyword-type>
+            <keyword>Michigan</keyword>
+        </keyword>
+        <keyword>
+            <keyword-type>Spatial</keyword-type>
+            <keyword>Minnesota</keyword>
+        </keyword>
+        <keyword>
+            <keyword-type>Spatial</keyword-type>
+            <keyword>U.S.</keyword>
+        </keyword>
+        <keyword>
+            <keyword-type>Spatial</keyword-type>
+            <keyword>U.S. Coastal Zone</keyword>
+        </keyword>
+        <keyword>
+            <keyword-type>Spatial</keyword-type>
+            <keyword>Wisconsin</keyword>
+        </keyword>
+    </keywords>
+    <physical-location>
+        <organization>Office for Coastal Management</organization>
+        <city>Charleston</city>
+        <state-province>SC</state-province>
+    </physical-location>
+    <data-set-information>
+        <data-set-scope-code>Data Set</data-set-scope-code>
+        <maintenance-note>5 years, or as needed</maintenance-note>
+        <data-presentation-form>Image (digital)</data-presentation-form>
+        <distribution-liability>Users must assume responsibility to determine the appropriate use of these data. DATA SHOULD NOT BE USED FOR LEGALLY BINDING APPLICATIONS.</distribution-liability>
+    </data-set-information>
+    <entity-attribute-information partial-listing="No" total-count="1">
+        <entity>
+            <catalog-item-id>49089</catalog-item-id>
+            <title>Coastal United States</title>
+            <short-name>Coastal United States</short-name>
+            <metadata-workflow-state ccs-id="10">Withdrawn</metadata-workflow-state>
+            <status>In Work</status>
+            <abstract>Coastal United States as delineated by NOAA using scene boundaries, hydrological units, and county boundaries | Description Source: unknown</abstract>
+            <notes>Converted from FGDC using 'fgdc_to_inport_xml_entity.pl' script.</notes>
+            <data-attributes partial-listing="No" total-count="1">
+                <data-attribute cc-id="655638">
+                    <seq-order>1</seq-order>
+                    <name>Landcover Classification</name>
+                    <data-storage-type>VARCHAR</data-storage-type>
+                    <required>No</required>
+                    <primary-key>No</primary-key>
+                    <status>Active</status>
+                    <description>Landcover Classification as determined by NOAA Coastal Change Analysis Program (C-CAP) | Description Source: N/A</description>
+                    <allowed-values>1: Unclassified to Unclassified | 2: Unclassified to High Intensity Developed | 3: Unclassified to Medium Intensity Developed | 4: Unclassified to Low Intensity Developed | 5: Unclassified to Open Space Developed | 6: Unclassified to Cultivated Land | 7: Unclassified to Pasture/Hay | 8: Unclassified to Grassland | 9: Unclassified to Deciduous Forest | 10: Unclassified to Evergreen Forest | 11: Unclassified to Mixed Forest | 12: Unclassified to Scrub/Shrub | 13: Unclassified to Palustrine Forested Wetland | 14: Unclassified to Palustrine Scrub/Shrub Wetland | 15: Unclassified to Palustrine Emergent Wetland | 16: Unclassified to Estuarine Forested Wetland | 17: Unclassified to Estuarine Scrub/Shrub Wetland | 18: Unclassified to Estuarine Emergent Wetland | 19: Unclassified to Unconsolidated Shore | 20: Unclassified to Bare Land | 21: Unclassified to Water | 22: Unclassified to Palustrine Aquatic Bed | 23: Unclassified to Estuarine Aquatic Bed | 24: Unclassified to Tundra | 25: Unclassified to Snow/Ice | 26: High Intensity Developed to Unclassified | 27: High Intensity Developed to High Intensity Developed | 28: High Intensity Developed to Medium Intensity Developed | 29: High Intensity Developed to Low Intensity Developed | 30: High Intensity Developed to Open Space Developed | 31: High Intensity Developed to Cultivated Land | 32: High Intensity Developed to Pasture/Hay | 33: High Intensity Developed to Grassland | 34: High Intensity Developed to Deciduous Forest | 35: High Intensity Developed to Evergreen Forest | 36: High Intensity Developed to Mixed Forest | 37: High Intensity Developed to Scrub/Shrub | 38: High Intensity Developed to Palustrine Forested Wetland | 39: High Intensity Developed to Palustrine Scrub/Shrub Wetland | 40: High Intensity Developed to Palustrine Emergent Wetland | 41: High Intensity Developed to Estuarine Forested Wetland | 42: High Intensity Developed to Estuarine Scrub/Shrub Wetland | 43: High Intensity Developed to Estuarine Emergent Wetland | 44: High Intensity Developed to Unconsolidated Shore | 45: High Intensity Developed to Bare Land | 46: High Intensity Developed to Water | 47: High Intensity Developed to Palustrine Aquatic Bed | 48: High Intensity Developed to Estuarine Aquatic Bed | 49: High Intensity Developed to Tundra | 50: High Intensity Developed to Snow/Ice | 51: Medium Intensity Developed to Unclassified | 52: Medium Intensity Developed to High Intensity Developed | 53: Medium Intensity Developed to Medium Intensity Developed | 54: Medium Intensity Developed to Low Intensity Developed | 55: Medium Intensity Developed to Open Space Developed | 56: Medium Intensity Developed to Cultivated Land | 57: Medium Intensity Developed to Pasture/Hay | 58: Medium Intensity Developed to Grassland | 59: Medium Intensity Developed to Deciduous Forest | 60: Medium Intensity Developed to Evergreen Forest | 61: Medium Intensity Developed to Mixed Forest | 62: Medium Intensity Developed to Scrub/Shrub | 63: Medium Intensity Developed to Palustrine Forested Wetland | 64: Medium Intensity Developed to Palustrine Scrub/Shrub Wetland | 65: Medium Intensity Developed to Palustrine Emergent Wetland | 66: Medium Intensity Developed to Estuarine Forested Wetland | 67: Medium Intensity Developed to Estuarine Scrub/Shrub Wetland | 68: Medium Intensity Developed to Estuarine Emergent Wetland | 69: Medium Intensity Developed to Unconsolidated Shore | 70: Medium Intensity Developed to Bare Land | 71: Medium Intensity Developed to Water | 72: Medium Intensity Developed to Palustrine Aquatic Bed | 73: Medium Intensity Developed to Estuarine Aquatic Bed | 74: Medium Intensity Developed to Tundra | 75: Medium Intensity Developed to Snow/Ice | 76: Low Intensity Developed to Unclassified | 77: Low Intensity Developed to High Intensity Developed | 78: Low Intensity Developed to Medium Intensity Developed | 79: Low Intensity Developed to Low Intensity Developed | 80: Low Intensity Developed to Open Space Developed | 81: Lo</allowed-values>
+                </data-attribute>
+            </data-attributes>
+        </entity>
+    </entity-attribute-information>
+    <support-roles>
+        <support-role cc-id="629896" in-effect="Yes">
+            <support-role-type>Data Steward</support-role-type>
+            <from-date>2016-10-03</from-date>
+            <contact-type>Organization</contact-type>
+            <contact-name>NOAA Office for Coastal Management</contact-name>
+            <contact-noaa-acronym>NOAA/OCM</contact-noaa-acronym>
+            <contact-email>coastal.info@noaa.gov</contact-email>
+            <contact-address>2234 South Hobson Ave</contact-address>
+            <contact-address-city>Charleston</contact-address-city>
+            <contact-address-state>SC</contact-address-state>
+            <contact-address-zip>29405-2413</contact-address-zip>
+            <contact-phone-number>(843) 740-1202</contact-phone-number>
+            <contact-url>https://coast.noaa.gov</contact-url>
+            <contact-url-description>NOAA Office for Coastal Management Home Page</contact-url-description>
+            <contact-url-function>Online Resource</contact-url-function>
+        </support-role>
+        <support-role cc-id="629898" in-effect="Yes">
+            <support-role-type>Distributor</support-role-type>
+            <from-date>2016-10-03</from-date>
+            <contact-type>Organization</contact-type>
+            <contact-name>NOAA Office for Coastal Management</contact-name>
+            <contact-noaa-acronym>NOAA/OCM</contact-noaa-acronym>
+            <contact-email>coastal.info@noaa.gov</contact-email>
+            <contact-address>2234 South Hobson Ave</contact-address>
+            <contact-address-city>Charleston</contact-address-city>
+            <contact-address-state>SC</contact-address-state>
+            <contact-address-zip>29405-2413</contact-address-zip>
+            <contact-phone-number>(843) 740-1202</contact-phone-number>
+            <contact-url>https://coast.noaa.gov</contact-url>
+            <contact-url-description>NOAA Office for Coastal Management Home Page</contact-url-description>
+            <contact-url-function>Online Resource</contact-url-function>
+        </support-role>
+        <support-role cc-id="629899" in-effect="Yes">
+            <support-role-type>Metadata Contact</support-role-type>
+            <from-date>2016-10-03</from-date>
+            <contact-type>Organization</contact-type>
+            <contact-name>NOAA Office for Coastal Management</contact-name>
+            <contact-noaa-acronym>NOAA/OCM</contact-noaa-acronym>
+            <contact-email>coastal.info@noaa.gov</contact-email>
+            <contact-address>2234 South Hobson Ave</contact-address>
+            <contact-address-city>Charleston</contact-address-city>
+            <contact-address-state>SC</contact-address-state>
+            <contact-address-zip>29405-2413</contact-address-zip>
+            <contact-phone-number>(843) 740-1202</contact-phone-number>
+            <contact-url>https://coast.noaa.gov</contact-url>
+            <contact-url-description>NOAA Office for Coastal Management Home Page</contact-url-description>
+            <contact-url-function>Online Resource</contact-url-function>
+        </support-role>
+        <support-role cc-id="629897" in-effect="Yes">
+            <support-role-type>Point of Contact</support-role-type>
+            <from-date>2016-10-03</from-date>
+            <contact-type>Organization</contact-type>
+            <contact-name>NOAA Office for Coastal Management</contact-name>
+            <contact-noaa-acronym>NOAA/OCM</contact-noaa-acronym>
+            <contact-email>coastal.info@noaa.gov</contact-email>
+            <contact-address>2234 South Hobson Ave</contact-address>
+            <contact-address-city>Charleston</contact-address-city>
+            <contact-address-state>SC</contact-address-state>
+            <contact-address-zip>29405-2413</contact-address-zip>
+            <contact-phone-number>(843) 740-1202</contact-phone-number>
+            <contact-url>https://coast.noaa.gov</contact-url>
+            <contact-url-description>NOAA Office for Coastal Management Home Page</contact-url-description>
+            <contact-url-function>Online Resource</contact-url-function>
+        </support-role>
+    </support-roles>
+    <extents>
+        <currentness-reference>Date of Landsat Scenes</currentness-reference>
+        <extent cc-id="629900">
+            <geographic-areas>
+                <geographic-area cc-id="629902">
+                    <west-bound>-125.2</west-bound>
+                    <east-bound>-81.13</east-bound>
+                    <north-bound>48.7</north-bound>
+                    <south-bound>41.13</south-bound>
+                </geographic-area>
+            </geographic-areas>
+            <time-frames>
+                <time-frame cc-id="629901">
+                    <time-frame-type>Range</time-frame-type>
+                    <start-date-time>1999-04-28</start-date-time>
+                    <end-date-time>2016-08-30</end-date-time>
+                </time-frame>
+            </time-frames>
+        </extent>
+    </extents>
+    <access-information>
+        <security-class>Unclassified</security-class>
+        <data-access-constraints>None</data-access-constraints>
+        <data-use-constraints>Data set is not for use in litigation. While efforts have been made to ensure that these data are accurate and reliable, NOAA, cannot assume liability for any damages, or misrepresentations, caused by any inaccuracies in the data. NOAA makes no warranty, expressed or implied, nor does the fact of distribution constitute such a warranty.</data-use-constraints>
+    </access-information>
+    <distribution-information>
+        <distribution cc-id="744858">
+            <download-url>https://coast.noaa.gov/dataviewer/#/landcover/search/where:ID=3690</download-url>
+            <file-name>Customized Download</file-name>
+            <description>Create custom data files by choosing area, map projection, file format, etc.</description>
+        </distribution>
+    </distribution-information>
+    <urls>
+        <url cc-id="744860">
+            <url>https://coast.noaa.gov/ccapftp/</url>
+            <url-type>Online Resource</url-type>
+        </url>
+        <url cc-id="744861">
+            <url>https://coast.noaa.gov/dataregistry</url>
+            <url-type>Online Resource</url-type>
+        </url>
+        <url cc-id="744862">
+            <url>https://coast.noaa.gov/digitalcoast/data/ccapregional.html</url>
+            <url-type>Online Resource</url-type>
+        </url>
+    </urls>
+    <activity-logs>
+        <activity-log cc-id="629924">
+            <activity-date-time>2017-08-17</activity-date-time>
+            <description>Date that the source FGDC record was last modified.</description>
+        </activity-log>
+        <activity-log cc-id="629923">
+            <activity-date-time>2017-11-14</activity-date-time>
+            <description>Converted from FGDC CSDGM (version FGDC-STD-001-1998) using 'fgdc_to_inport_xml.pl' script. Contact Tyler Christensen (NOS) for details.</description>
+        </activity-log>
+        <activity-log cc-id="744859">
+            <activity-date-time>2018-03-13</activity-date-time>
+            <description>Partial upload to move data access links to Distribution Info.</description>
+        </activity-log>
+    </activity-logs>
+    <technical-environment>
+        <description>Microsoft Windows XP Version 5.1 (Build 2600) Service Pack 2; ESRI ArcCatalog 9.1.0.780</description>
+    </technical-environment>
+    <data-quality>
+        <accuracy>An accuracy assessment was performed on the 2010-era C-CAP products.  Reports detailing the methods, overall, and individual  class accuracies can be found at https://coast.noaa.gov/digitalcoast/publications/regional-reports</accuracy>
+        <completeness-report>Data does not exist for all classes. Class 1 (Unclassified) is intentionally left blank. All pixels have been  classified.</completeness-report>
+        <conceptual-consistency>Tests for logical consistency indicate that all row and column positions in the selected  latitude/longitude window contain data. Conversion and integration with vector files indicates that all positions are consistent with  earth coordinates covering the same area. Attribute files are logically consistent.</conceptual-consistency>
+    </data-quality>
+    <lineage>
+        <lineage-sources>
+            <lineage-source cc-id="629888">
+                <citation-title>Landsat Thematic Mapper satellite imagery</citation-title>
+                <contact-name>United States Geological Survey</contact-name>
+                <publish-date>2016-10-03</publish-date>
+                <extent-type>Range</extent-type>
+                <extent-start-date-time>1999-04-28</extent-start-date-time>
+                <extent-end-date-time>2015-11-29</extent-end-date-time>
+                <citation-url>http://glovis.usgs.gov/</citation-url>
+                <source-contribution>Landsat TM satellite imagery were used for image interpretation and classification | Type of Source Media: DVD/CD-ROM/online</source-contribution>
+            </lineage-source>
+        </lineage-sources>
+        <lineage-process-steps>
+            <lineage-process-step cc-id="629889">
+                <sequence-number>1</sequence-number>
+                <description>This dataset was created by NOAA's Office for Coastal Management, through the Coastal Change Analysis Program (C-CAP).  The data is based upon the post classification comparison of 2001 and 2016 era C-CAP land cover classifications.  ERDAS Imagine was used to create a matrix file between the two selected dates of land cover.</description>
+                <process-date-time>2016-10-03T00:00:00</process-date-time>
+            </lineage-process-step>
+        </lineage-process-steps>
+    </lineage>
+    <child-items>
+        <child-item>
+            <catalog-item-id>49089</catalog-item-id>
+            <catalog-item-type>Entity</catalog-item-type>
+            <title>Coastal United States</title>
+        </child-item>
+    </child-items>
+    <catalog-details>
+        <metadata-record-created-by pers-id="19064">Anne Ball</metadata-record-created-by>
+        <metadata-record-created>2017-11-14T14:38:54</metadata-record-created>
+        <metadata-record-last-modified-by pers-id="20138">Erik Hund</metadata-record-last-modified-by>
+        <metadata-record-last-modified>2020-03-25T08:45:51</metadata-record-last-modified>
+        <record-published>2020-03-25</record-published>
+        <owner-organization>Office for Coastal Management</owner-organization>
+        <owner-organization-acronym>OCM</owner-organization-acronym>
+        <owner-organization-address/>
+        <owner-organization-address-city/>
+        <owner-organization-address-state/>
+        <owner-organization-address-zip/>
+        <owner-organization-address-country/>
+        <owner-organization-phone/>
+        <owner-organization-url/>
+        <owner-organization-business-hours/>
+        <owner-organization-group-id>1002</owner-organization-group-id>
+        <publication-status>Withdrawn</publication-status>
+        <is-do-not-publish>No</is-do-not-publish>
+        <metadata-next-review-date>2019-03-14</metadata-next-review-date>
+    </catalog-details>
+</inport-metadata>

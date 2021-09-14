@@ -1,8 +1,5 @@
 import stactools.core
-
-from stactools.noaa_c_cap.stac import create_collection, create_item
-
-__all__ = ['create_collection', 'create_item']
+from stactools.noaa_c_cap.metadata import Metadata
 
 stactools.core.use_fsspec()
 
@@ -12,4 +9,5 @@ def register_plugin(registry):
     registry.register_subcommand(commands.create_noaa_c_cap_command)
 
 
+__all__ = ['Metadata']
 __version__ = "0.1.0"

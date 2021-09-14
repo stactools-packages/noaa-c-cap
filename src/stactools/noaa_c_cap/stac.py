@@ -1,6 +1,10 @@
-from pystac import (Collection, Item)
+from typing import Optional
+
+from pystac import Collection, Item, MediaType
 
 from stactools.core import create
+
+from stactools.noaa_c_cap import Metadata
 
 
 def create_collection() -> Collection:
@@ -18,7 +22,7 @@ def create_collection() -> Collection:
     raise NotImplementedError
 
 
-def create_item(tiff_href: str) -> Item:
+def create_item(tiff_href: str, xml_href: Optional[str] = None) -> Item:
     """Creates a STAC Item for the provided C-CAP tiff file.
 
     Args:
@@ -28,4 +32,10 @@ def create_item(tiff_href: str) -> Item:
         Item: STAC Item object
     """
     item = create.item(tiff_href)
+    data = item.assets.get('data')
+    assert data
+    data.media_type = MediaType.GEOTIFF
+    if xml_href:
+        metadata = Metadata(xml_href)
+        item.datetime = metadata.publication_date
     return item
