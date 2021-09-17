@@ -29,6 +29,15 @@ class StacTest(unittest.TestCase):
             'conus_2016_ccap_landcover_20200311.tif')
         item = stac.create_item(path)
         self.assertEqual(item.id, 'conus_2016_ccap_landcover_20200311')
+        self.assertEqual(
+            item.datetime,
+            datetime.datetime(2016, 1, 1, tzinfo=datetime.timezone.utc))
+        self.assertEqual(
+            item.common_metadata.start_datetime,
+            datetime.datetime(2016, 1, 1, tzinfo=datetime.timezone.utc))
+        self.assertEqual(
+            item.common_metadata.end_datetime,
+            datetime.datetime(2016, 12, 31, tzinfo=datetime.timezone.utc))
         data = item.assets['data']
         self.assertEqual(data.media_type, MediaType.GEOTIFF)
         item.validate()
@@ -38,7 +47,4 @@ class StacTest(unittest.TestCase):
             'conus_2016_ccap_landcover_20200311.tif')
         xml_path = test_data.get_path('data-files/CCAP_Parent_2016.xml')
         item = stac.create_item(tiff_path, xml_path)
-        self.assertEqual(
-            item.datetime,
-            datetime.datetime(2016, 10, 3, tzinfo=datetime.timezone.utc))
         item.validate()

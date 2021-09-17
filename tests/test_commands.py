@@ -70,7 +70,4 @@ class CommandsTest(CliTestCase):
                              0,
                              msg="\n{}".format(result.output))
             item = pystac.read_file(destination)
-            self.assertEqual(
-                item.datetime,
-                datetime.datetime(2016, 10, 3, tzinfo=datetime.timezone.utc))
             item.validate()
