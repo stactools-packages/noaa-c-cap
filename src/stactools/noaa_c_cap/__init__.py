@@ -1,4 +1,5 @@
 import stactools.core
+
 from stactools.noaa_c_cap.metadata import Metadata
 
 stactools.core.use_fsspec()

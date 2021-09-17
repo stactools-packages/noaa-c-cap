@@ -4,7 +4,6 @@ import unittest
 from pystac import MediaType
 
 from stactools.noaa_c_cap import stac
-
 from tests import test_data
 
 

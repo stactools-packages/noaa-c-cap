@@ -1,7 +1,6 @@
 from typing import Optional
 
 from pystac import Collection, Item, MediaType
-
 from stactools.core import create
 
 from stactools.noaa_c_cap import Metadata

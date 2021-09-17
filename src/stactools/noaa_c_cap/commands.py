@@ -1,11 +1,10 @@
 import logging
 import os
-import pkg_resources
 from typing import Optional
 
 import click
+import pkg_resources
 import requests
-
 import stactools.core.utils.convert
 
 from stactools.noaa_c_cap import stac
@@ -41,12 +40,10 @@ def create_noaa_c_cap_command(cli):
     @click.argument("source")
     @click.argument("destination")
     @click.option('-x', '--xml', help='HREF to the metadata XML file.')
-    @click.option(
-        '--cogify/--no-cogify',
-        default=False,
-        help=
-        'Use a Cloud-Optimized GeoTIFF version of the input file as the data asset.'
-    )
+    @click.option('--cogify/--no-cogify',
+                  default=False,
+                  help=('Use a Cloud-Optimized GeoTIFF version '
+                        'of the input file as the data asset.'))
     def create_item_command(source: str, destination: str, xml: Optional[str],
                             cogify: bool):
         """Creates a STAC Item

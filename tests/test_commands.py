@@ -1,14 +1,12 @@
 import datetime
 import os.path
-from tempfile import TemporaryDirectory
 import unittest
+from tempfile import TemporaryDirectory
 
 import pystac
-from pystac import MediaType
 from stactools.testing import CliTestCase
 
 from stactools.noaa_c_cap.commands import create_noaa_c_cap_command
-
 from tests import test_data
 
 
