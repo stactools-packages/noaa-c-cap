@@ -8,12 +8,6 @@ from tests import test_data
 
 
 class StacTest(unittest.TestCase):
-    def test_create_collection(self):
-        raise unittest.SkipTest
-        collection = stac.create_collection()
-        self.assertEqual(collection.id, "my-collection-id")
-        collection.validate()
-
     def test_create_item(self):
         path = test_data.get_external_data(
             'conus_2016_ccap_landcover_20200311.tif')

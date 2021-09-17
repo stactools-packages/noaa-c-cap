@@ -21,21 +21,6 @@ def create_noaa_c_cap_command(cli):
     def noaa_c_cap():
         pass
 
-    @noaa_c_cap.command(
-        "create-collection",
-        short_help="Creates a STAC collection",
-    )
-    @click.argument("destination")
-    def create_collection_command(destination: str):
-        """Creates a STAC Collection
-
-        Args:
-            destination (str): An HREF for the Collection JSON
-        """
-        collection = stac.create_collection()
-        collection.set_self_href(destination)
-        collection.save_object()
-
     @noaa_c_cap.command("create-item", short_help="Create a STAC item")
     @click.argument("source")
     @click.argument("destination")
