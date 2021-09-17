@@ -3,11 +3,10 @@ import os
 from typing import Optional
 
 import click
-import pkg_resources
 import requests
 import stactools.core.utils.convert
 
-from stactools.noaa_c_cap import stac
+from stactools.noaa_c_cap import stac, utils
 
 logger = logging.getLogger(__name__)
 
@@ -58,10 +57,8 @@ def create_noaa_c_cap_command(cli):
         Args:
             destinatino (str): A local directory into which the data will downloaded.
         """
-        urls = pkg_resources.resource_string(
-            __name__, 'urllist-modres.txt').decode('utf-8')
         os.makedirs(destination, exist_ok=True)
-        for url in urls.splitlines():
+        for url in utils.urls():
             file_name = os.path.basename(url)
             path = os.path.join(destination, file_name)
             print(f"Downloading {url} to {path}")

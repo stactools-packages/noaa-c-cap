@@ -1,6 +1,7 @@
 import stactools.core
 
 from stactools.noaa_c_cap.metadata import Metadata
+from stactools.noaa_c_cap.dataset import Dataset
 
 stactools.core.use_fsspec()
 
@@ -10,5 +11,5 @@ def register_plugin(registry):
     registry.register_subcommand(commands.create_noaa_c_cap_command)
 
 
-__all__ = ['Metadata']
+__all__ = ['Metadata', 'Dataset']
 __version__ = "0.1.0"

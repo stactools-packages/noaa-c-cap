@@ -1,4 +1,6 @@
 import datetime
+import os.path
+from tempfile import TemporaryDirectory
 import unittest
 
 from pystac import MediaType
@@ -8,6 +10,20 @@ from tests import test_data
 
 
 class StacTest(unittest.TestCase):
+    def test_create_collection(self):
+        hrefs = [
+            test_data.get_external_data(
+                'conus_2016_ccap_landcover_20200311.tif'),
+            test_data.get_path('data-files/CCAP_Parent_2016.xml'),
+        ]
+        collection = stac.create_collection(hrefs)
+        self.assertEqual(collection.id, 'noaa-c-cap')
+        self.assertEqual(len(list(collection.get_all_items())), 1)
+        with TemporaryDirectory() as directory:
+            collection.normalize_hrefs(
+                os.path.join(directory, 'collection.json'))
+            collection.validate_all()
+
     def test_create_item(self):
         path = test_data.get_external_data(
             'conus_2016_ccap_landcover_20200311.tif')
