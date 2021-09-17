@@ -12,7 +12,13 @@ class Metadata:
             string = file.read()
         xml = ElementTree.fromstring(string)
         publication_date = xml.findtext('item-identification/publication-date')
-        assert publication_date
-        self.publication_date = datetime.datetime.strptime(
-            publication_date,
-            r'%Y-%m-%d').replace(tzinfo=datetime.timezone.utc)
+        if publication_date:
+            self.publication_date = datetime.datetime.strptime(
+                publication_date,
+                r'%Y-%m-%d').replace(tzinfo=datetime.timezone.utc)
+        else:
+            timeperd = xml.findtext(
+                'idinfo/timeperd/timeinfo/sngdate/caldate')  # puerto rico
+            if timeperd:
+                self.publication_date = datetime.datetime.strptime(
+                    timeperd, r'%Y%m%d')

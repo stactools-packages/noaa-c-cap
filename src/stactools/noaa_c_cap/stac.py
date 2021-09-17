@@ -1,4 +1,4 @@
-import os.path
+import logging
 from typing import Optional, List
 
 from pystac import Item, MediaType, Collection, Extent
@@ -6,6 +6,8 @@ from stactools.core import create
 
 from stactools.noaa_c_cap import Metadata, utils, Dataset
 from stactools.noaa_c_cap.constants import COLLECTION_ID, COLLECTION_DESCRIPTION
+
+logger = logging.getLogger(__name__)
 
 
 def create_collection(hrefs: Optional[List[str]] = None) -> Collection:
@@ -40,6 +42,7 @@ def create_item(tiff_href: str, xml_href: Optional[str] = None) -> Item:
     Returns:
         Item: STAC Item object
     """
+    logger.info(f"Creating STAC item from {tiff_href}")
     item = create.item(tiff_href)
     data = item.assets.get('data')
     assert data
