@@ -15,6 +15,7 @@ class Dataset:
     location: str
     xml_file_name: Optional[str]
     xml_href: Optional[str]
+    classes: List[str]
 
     @classmethod
     def from_hrefs(cls, hrefs: List[str]) -> List['Dataset']:

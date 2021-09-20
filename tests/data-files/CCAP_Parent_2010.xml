@@ -1,0 +1,607 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inport-metadata xmlns:xs="http://www.w3.org/2001/XMLSchema" version="0.9">
+   <item-identification>
+      <catalog-item-id>48335</catalog-item-id>
+      <title>NOAA's Coastal Change Analysis Program (C-CAP) 2010 Regional Land Cover Data - Coastal United States</title>
+      <short-name>CCAP_2010_Parent</short-name>
+      <catalog-item-type>Data Set</catalog-item-type>
+      <metadata-workflow-state ccs-id="9">Published / External</metadata-workflow-state>
+      <parent-catalog-item-id>47841</parent-catalog-item-id>
+      <parent-title>C-CAP</parent-title>
+      <parent-catalog-item-type>Project</parent-catalog-item-type>
+      <status>In Work</status>
+      <publication-date>2020-03-11</publication-date>
+      <abstract>The NOAA Coastal Change Analysis Program (C-CAP) produces national standardized land cover and change products for the coastal regions of the U.S.  C-CAP products inventory coastal intertidal areas, wetlands, and adjacent uplands with the goal of monitoring changes in these habitats, on a one-to-five year repeat cycle. The timeframe for this metadata is reported as 2010-Era, but the actual dates of the Landsat imagery used to create the land cover may have been acquired a few years before or after each era.  These maps are developed utilizing Landsat Thematic Mapper imagery, and can be used to track changes in the landscape through time.  This trend information gives important feedback to managers on the success or failure of management policies and programs and aid in developing a scientific understanding of the Earth system and its response to natural and human-induced changes. This understanding allows for the prediction of impacts due to these changes and the assessment of their cumulative effects, helping coastal resource managers make more informed regional decisions. NOAA C-CAP is a contributing member to the Multi-Resolution Land Characteristics consortium and C-CAP products are included as the coastal expression of land cover within the National Land Cover Database.</abstract>
+      <purpose>C-CAP is dedicated to the development, distribution, and application of land cover and change data for the coastal regions of the U.S. This effort is being conducted in close coordination with state coastal management agencies, the interagency Multi-Resolution Land Characteristics (MRLC) consortium, and the National Land Cover Database (NLCD).</purpose>
+      <notes>11461</notes>
+      <supplemental-information>Attributes for this product are as follows:
+0 Background,
+1 Unclassified (Cloud, Shadow, etc),
+2 High Intensity Developed,
+3 Medium Intensity Developed,
+4 Low Intensity Developed,
+5 Developed Open Space,
+6 Cultivated Land,
+7 Pasture/Hay,
+8 Grassland,
+9 Deciduous Forest,
+10 Evergreen Forest,
+11 Mixed Forest,
+12 Scrub/Shrub,
+13 Palustrine Forested Wetland,
+14 Palustrine Scrub/Shrub Wetland,
+15 Palustrine Emergent Wetland,
+16 Estuarine Forested Wetland,
+17 Estuarine Scrub/Shrub Wetland,
+18 Estuarine Emergent Wetland,
+19 Unconsolidated Shore,
+20 Bare Land,
+21 Open Water,
+22 Palustrine Aquatic Bed,
+23 Estuarine Aquatic Bed,
+24 Tundra,
+25 Snow/Ice,
+Recommended Citation. NOAA Coastal Change Analysis Program (C-CAP) Regional Land Cover Database. Data collected 1995-present. Charleston, SC: National Oceanic and Atmospheric Administration (NOAA) Office for Coastal Management. Data accessed at coast.noaa.gov/landcover.</supplemental-information>
+   </item-identification>
+   <keywords>
+      <keyword>
+         <keyword-type>Theme</keyword-type>
+         <thesaurus>ISO 19115 Topic Category</thesaurus>
+         <keyword>imageryBaseMapsEarthCover</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Theme</keyword-type>
+         <thesaurus>NASA/GCMD Earth Science Keywords</thesaurus>
+         <keyword>EARTH SCIENCE : Human Dimensions : Environmental Governance/Management : Land Management : Land Use/Land Cover Classification</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Theme</keyword-type>
+         <thesaurus>NASA/GCMD Earth Science Keywords</thesaurus>
+         <keyword>EARTH SCIENCE : Land Surface : Land Use/Land Cover : Land Cover</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Theme</keyword-type>
+         <thesaurus>NASA/GCMD Earth Science Keywords</thesaurus>
+         <keyword>EARTH SCIENCE : Land Surface : Land Use/Land Cover : Land Use Classes</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Theme</keyword-type>
+         <keyword>CCAP</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Theme</keyword-type>
+         <keyword>Coastal Change Analysis Program</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Theme</keyword-type>
+         <keyword>Land Cover Analysis</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Theme</keyword-type>
+         <keyword>Remotely Sensed Imagery/Photos</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Theme</keyword-type>
+         <thesaurus>Global Change Master Directory (GCMD) Science Keywords</thesaurus>
+         <keyword>Earth Science &gt; Land Surface &gt; Land Use/Land Cover</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Theme</keyword-type>
+         <thesaurus>Global Change Master Directory (GCMD) Science Keywords</thesaurus>
+         <keyword>Earth Science &gt; Land Surface &gt; Land Use/Land Cover &gt; Land Use/Land Cover Classification</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Theme</keyword-type>
+         <thesaurus>Global Change Master Directory (GCMD) Instrument Keywords</thesaurus>
+         <keyword>Earth Remote Sensing Instruments &gt; Passive Remote Sensing &gt; Photon/Optical Detectors &gt; Cameras &gt; CAMERAS</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Theme</keyword-type>
+         <thesaurus>Global Change Master Directory (GCMD) Platform Keywords</thesaurus>
+         <keyword>Earth Observation Satellites &gt; LANDSAT</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Spatial</keyword-type>
+         <thesaurus>Global Change Master Directory (GCMD) Location Keywords</thesaurus>
+         <keyword>Continent &gt; North America &gt; United States Of America</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Spatial</keyword-type>
+         <thesaurus>Global Change Master Directory (GCMD) Location Keywords</thesaurus>
+         <keyword>Continent &gt; North America &gt; United States Of America &gt; Alabama</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Spatial</keyword-type>
+         <thesaurus>Global Change Master Directory (GCMD) Location Keywords</thesaurus>
+         <keyword>Continent &gt; North America &gt; United States Of America &gt; California</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Spatial</keyword-type>
+         <thesaurus>Global Change Master Directory (GCMD) Location Keywords</thesaurus>
+         <keyword>Continent &gt; North America &gt; United States Of America &gt; Connecticut</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Spatial</keyword-type>
+         <thesaurus>Global Change Master Directory (GCMD) Location Keywords</thesaurus>
+         <keyword>Continent &gt; North America &gt; United States Of America &gt; Delaware</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Spatial</keyword-type>
+         <thesaurus>Global Change Master Directory (GCMD) Location Keywords</thesaurus>
+         <keyword>Continent &gt; North America &gt; United States Of America &gt; District Of Columbia</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Spatial</keyword-type>
+         <thesaurus>Global Change Master Directory (GCMD) Location Keywords</thesaurus>
+         <keyword>Continent &gt; North America &gt; United States Of America &gt; Florida</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Spatial</keyword-type>
+         <thesaurus>Global Change Master Directory (GCMD) Location Keywords</thesaurus>
+         <keyword>Continent &gt; North America &gt; United States Of America &gt; Georgia</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Spatial</keyword-type>
+         <thesaurus>Global Change Master Directory (GCMD) Location Keywords</thesaurus>
+         <keyword>Continent &gt; North America &gt; United States Of America &gt; Illinois</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Spatial</keyword-type>
+         <thesaurus>Global Change Master Directory (GCMD) Location Keywords</thesaurus>
+         <keyword>Continent &gt; North America &gt; United States Of America &gt; Indiana</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Spatial</keyword-type>
+         <thesaurus>Global Change Master Directory (GCMD) Location Keywords</thesaurus>
+         <keyword>Continent &gt; North America &gt; United States Of America &gt; Louisiana</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Spatial</keyword-type>
+         <thesaurus>Global Change Master Directory (GCMD) Location Keywords</thesaurus>
+         <keyword>Continent &gt; North America &gt; United States Of America &gt; Maine</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Spatial</keyword-type>
+         <thesaurus>Global Change Master Directory (GCMD) Location Keywords</thesaurus>
+         <keyword>Continent &gt; North America &gt; United States Of America &gt; Maryland</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Spatial</keyword-type>
+         <thesaurus>Global Change Master Directory (GCMD) Location Keywords</thesaurus>
+         <keyword>Continent &gt; North America &gt; United States Of America &gt; Massachusetts</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Spatial</keyword-type>
+         <thesaurus>Global Change Master Directory (GCMD) Location Keywords</thesaurus>
+         <keyword>Continent &gt; North America &gt; United States Of America &gt; Michigan</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Spatial</keyword-type>
+         <thesaurus>Global Change Master Directory (GCMD) Location Keywords</thesaurus>
+         <keyword>Continent &gt; North America &gt; United States Of America &gt; Minnesota</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Spatial</keyword-type>
+         <thesaurus>Global Change Master Directory (GCMD) Location Keywords</thesaurus>
+         <keyword>Continent &gt; North America &gt; United States Of America &gt; Mississippi</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Spatial</keyword-type>
+         <thesaurus>Global Change Master Directory (GCMD) Location Keywords</thesaurus>
+         <keyword>Continent &gt; North America &gt; United States Of America &gt; New Hampshire</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Spatial</keyword-type>
+         <thesaurus>Global Change Master Directory (GCMD) Location Keywords</thesaurus>
+         <keyword>Continent &gt; North America &gt; United States Of America &gt; New Jersey</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Spatial</keyword-type>
+         <thesaurus>Global Change Master Directory (GCMD) Location Keywords</thesaurus>
+         <keyword>Continent &gt; North America &gt; United States Of America &gt; New York</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Spatial</keyword-type>
+         <thesaurus>Global Change Master Directory (GCMD) Location Keywords</thesaurus>
+         <keyword>Continent &gt; North America &gt; United States Of America &gt; North Carolina</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Spatial</keyword-type>
+         <thesaurus>Global Change Master Directory (GCMD) Location Keywords</thesaurus>
+         <keyword>Continent &gt; North America &gt; United States Of America &gt; Ohio</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Spatial</keyword-type>
+         <thesaurus>Global Change Master Directory (GCMD) Location Keywords</thesaurus>
+         <keyword>Continent &gt; North America &gt; United States Of America &gt; Oregon</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Spatial</keyword-type>
+         <thesaurus>Global Change Master Directory (GCMD) Location Keywords</thesaurus>
+         <keyword>Continent &gt; North America &gt; United States Of America &gt; Pennsylvania</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Spatial</keyword-type>
+         <thesaurus>Global Change Master Directory (GCMD) Location Keywords</thesaurus>
+         <keyword>Continent &gt; North America &gt; United States Of America &gt; Rhode Island</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Spatial</keyword-type>
+         <thesaurus>Global Change Master Directory (GCMD) Location Keywords</thesaurus>
+         <keyword>Continent &gt; North America &gt; United States Of America &gt; South Carolina</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Spatial</keyword-type>
+         <thesaurus>Global Change Master Directory (GCMD) Location Keywords</thesaurus>
+         <keyword>Continent &gt; North America &gt; United States Of America &gt; Texas</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Spatial</keyword-type>
+         <thesaurus>Global Change Master Directory (GCMD) Location Keywords</thesaurus>
+         <keyword>Continent &gt; North America &gt; United States Of America &gt; Vermont</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Spatial</keyword-type>
+         <thesaurus>Global Change Master Directory (GCMD) Location Keywords</thesaurus>
+         <keyword>Continent &gt; North America &gt; United States Of America &gt; Virginia</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Spatial</keyword-type>
+         <thesaurus>Global Change Master Directory (GCMD) Location Keywords</thesaurus>
+         <keyword>Continent &gt; North America &gt; United States Of America &gt; Washington</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Spatial</keyword-type>
+         <thesaurus>Global Change Master Directory (GCMD) Location Keywords</thesaurus>
+         <keyword>Continent &gt; North America &gt; United States Of America &gt; Wisconsin</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Spatial</keyword-type>
+         <keyword>Alabama</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Spatial</keyword-type>
+         <keyword>California</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Spatial</keyword-type>
+         <keyword>Connecticut</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Spatial</keyword-type>
+         <keyword>Delaware</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Spatial</keyword-type>
+         <keyword>Florida</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Spatial</keyword-type>
+         <keyword>Georgia</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Spatial</keyword-type>
+         <keyword>Illinois</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Spatial</keyword-type>
+         <keyword>Indiana</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Spatial</keyword-type>
+         <keyword>Louisiana</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Spatial</keyword-type>
+         <keyword>Maine</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Spatial</keyword-type>
+         <keyword>Maryland</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Spatial</keyword-type>
+         <keyword>Massachusetts</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Spatial</keyword-type>
+         <keyword>Michigan</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Spatial</keyword-type>
+         <keyword>Minnesota</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Spatial</keyword-type>
+         <keyword>Mississippi</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Spatial</keyword-type>
+         <keyword>New Hampshire</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Spatial</keyword-type>
+         <keyword>New Jersey</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Spatial</keyword-type>
+         <keyword>New York</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Spatial</keyword-type>
+         <keyword>North Carolina</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Spatial</keyword-type>
+         <keyword>Ohio</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Spatial</keyword-type>
+         <keyword>Oregon</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Spatial</keyword-type>
+         <keyword>Pennsylvania</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Spatial</keyword-type>
+         <keyword>Rhode Island</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Spatial</keyword-type>
+         <keyword>South Carolina</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Spatial</keyword-type>
+         <keyword>Texas</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Spatial</keyword-type>
+         <keyword>U.S.</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Spatial</keyword-type>
+         <keyword>U.S. Coastal Zone</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Spatial</keyword-type>
+         <keyword>Vermont</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Spatial</keyword-type>
+         <keyword>Virginia</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Spatial</keyword-type>
+         <keyword>Washington</keyword>
+      </keyword>
+      <keyword>
+         <keyword-type>Spatial</keyword-type>
+         <keyword>Wisconsin</keyword>
+      </keyword>
+   </keywords>
+   <physical-location>
+      <organization>Office for Coastal Management</organization>
+      <city>Charleston</city>
+      <state-province>SC</state-province>
+   </physical-location>
+   <data-set-information>
+      <data-set-scope-code>Data Set</data-set-scope-code>
+      <maintenance-note>5 years, or as needed</maintenance-note>
+      <data-presentation-form>Image (digital)</data-presentation-form>
+      <distribution-liability>Users must assume responsibility to determine the appropriate use of these data. DATA SHOULD NOT BE USED FOR LEGALLY BINDING APPLICATIONS.</distribution-liability>
+   </data-set-information>
+   <entity-attribute-information partial-listing="No" total-count="1">
+      <entity>
+         <catalog-item-id>49095</catalog-item-id>
+         <title>Coastal United States</title>
+         <short-name>Coastal United States</short-name>
+         <metadata-workflow-state ccs-id="9">Published / External</metadata-workflow-state>
+         <status>In Work</status>
+         <abstract>Coastal United States as delineated by NOAA using scene boundaries, hydrological units, and county boundaries | Description Source: unknown</abstract>
+         <notes>Converted from FGDC using 'fgdc_to_inport_xml_entity.pl' script.</notes>
+         <data-attributes partial-listing="No" total-count="1">
+            <data-attribute cc-id="655644">
+               <seq-order>1</seq-order>
+               <name>Landcover Classification</name>
+               <data-storage-type>VARCHAR</data-storage-type>
+               <required>No</required>
+               <primary-key>No</primary-key>
+               <status>Active</status>
+               <description>Landcover Classification as determined by NOAA Coastal Change Analysis Program (C-CAP) | Description Source: https://coast.noaa.gov/data/digitalcoast/pdf/ccap-class-scheme-regional.pdf</description>
+               <allowed-values>1 Unclassified: This class contains no data due to cloud conditions or data voids. | 2 High Intensity Developed: Contains little or no vegetation. This subclass includes heavily built-up urban centers as well as large constructed surfaces in suburban and rural areas.  Large buildings (such as multiple family housing, hangars, and large barns), interstate highways, and runways typically fall into this subclass.  Impervious surfaces account for 80-100 percent of the total cover. | 3 Medium Intensity Developed: Contains substantial amounts of constructed surface mixed with substantial amounts of vegetated surface. Small buildings (such as single family housing, farm outbuildings, and large sheds), typically fall into this subclass. Impervious surfaces account for 50-79 percent of the total cover. | 4 Low Intensity Developed: Contains constructed surface mixed with vegetated surface. This class includes features seen class 3, with the addition of streets and roads with associated trees and grasses. Impervious surfaces account for 21-49 percent of the total cover. | 5 Developed Open Space: Includes areas with a mixture of some constructed materials, but mostly vegetation in the form of lawn grasses. This subclass includes parks, lawns, athletic fields, golf courses, and natural grasses occurring around airports and industrial sites. Impervious surfaces account for less than 20 percent of total cover. | 6 Cultivated Land: Includes herbaceous (cropland) and woody (e.g., orchards, nurseries, and vineyards) cultivated lands. | 7 Pasture/Hay: Characterized by grasses, legumes or grass-legume mixtures planted for livestock grazing or the production of seed or hay crops. | 8 Grassland: Dominated by naturally occurring grasses and non-grasses (forbs) that are not fertilized, cut, tilled, or planted regularly. | 9 Deciduous Forest: Includes areas dominated by single stemmed, woody vegetation unbranched 0.6 to 1 meter above the ground and having a height greater than 5 meters and cover more than 20% of land area. More than 75 percent of the tree species shed foliage simultaneous in response to seasonal change. | 10 Evergreen Forest: Includes areas in which more than 67 percent of the trees remain green throughout the year. Both coniferous and broad-leaved evergreens are included in this category.  Trees must be taller than 5 meters and more than 20% of the land cover. | 11 Mixed Forest: Contains all forested areas in which both evergreen and deciduous trees are growing and neither predominate. Trees must be taller than 5 meters and more than 20% of the land cover. | 12 Scrub/Shrub: Areas dominated by woody vegetation less than 5 meters in height. This class includes true shrubs,young trees, and trees or shrubs that are small or stunted because of environmental conditions. Includes both evergreen and deciduous scrub. | 13 Palustrine Forested Wetland: Includes all non-tidal wetlands dominated by woody vegetation greater than or equal to 5 meters in height, and all such wetlands that occur in tidal areas in which salinity due to ocean-derived salts is below 0.5 parts per thousand (ppt). | 14 Palustrine Scrub/Shrub Wetland: Includes all non-tidal wetlands dominated by woody vegetation less than or equal to 5 meters in height, and all such wetlands that occur in tidal areas in which salinity due to ocean-derived salts is below 0.5 ppt. | 15 Palustrine Emergent Wetland: Includes all non-tidal wetlands dominated by persistent emergents, emergent mosses, or lichens, and all such wetlands that occur in tidal areas in which salinity due to ocean-derived salts is below 0.5 ppt. | 16 Estuarine Forest Wetland: Includes all tidal wetlands dominated by woody vegetation greater than or equal to 5 meters in height, and all such wetlands that occur in tidal areas in which salinity due to ocean-derived salts is above 0.5 parts per thousand (ppt). | 17 Estuarine Scrub/Shrub Wetland: Includes all tidal wetlands dominated by woody vegetation less than or equal to</allowed-values>
+            </data-attribute>
+         </data-attributes>
+      </entity>
+   </entity-attribute-information>
+   <support-roles>
+      <support-role cc-id="630290" in-effect="Yes">
+         <support-role-type>Data Steward</support-role-type>
+         <from-date>2013-05-21</from-date>
+         <contact-type>Organization</contact-type>
+         <contact-name>NOAA Office for Coastal Management</contact-name>
+         <contact-noaa-acronym>NOAA/OCM</contact-noaa-acronym>
+         <contact-email>coastal.info@noaa.gov</contact-email>
+         <contact-address>2234 South Hobson Ave</contact-address>
+         <contact-address-city>Charleston</contact-address-city>
+         <contact-address-state>SC</contact-address-state>
+         <contact-address-zip>29405-2413</contact-address-zip>
+         <contact-phone-number>(843) 740-1202</contact-phone-number>
+         <contact-url>https://coast.noaa.gov</contact-url>
+         <contact-url-description>NOAA Office for Coastal Management Home Page</contact-url-description>
+         <contact-url-function>Online Resource</contact-url-function>
+      </support-role>
+      <support-role cc-id="630292" in-effect="Yes">
+         <support-role-type>Distributor</support-role-type>
+         <from-date>2013-05-21</from-date>
+         <contact-type>Organization</contact-type>
+         <contact-name>NOAA Office for Coastal Management</contact-name>
+         <contact-noaa-acronym>NOAA/OCM</contact-noaa-acronym>
+         <contact-email>coastal.info@noaa.gov</contact-email>
+         <contact-address>2234 South Hobson Ave</contact-address>
+         <contact-address-city>Charleston</contact-address-city>
+         <contact-address-state>SC</contact-address-state>
+         <contact-address-zip>29405-2413</contact-address-zip>
+         <contact-phone-number>(843) 740-1202</contact-phone-number>
+         <contact-url>https://coast.noaa.gov</contact-url>
+         <contact-url-description>NOAA Office for Coastal Management Home Page</contact-url-description>
+         <contact-url-function>Online Resource</contact-url-function>
+      </support-role>
+      <support-role cc-id="630293" in-effect="Yes">
+         <support-role-type>Metadata Contact</support-role-type>
+         <from-date>2013-05-21</from-date>
+         <contact-type>Organization</contact-type>
+         <contact-name>NOAA Office for Coastal Management</contact-name>
+         <contact-noaa-acronym>NOAA/OCM</contact-noaa-acronym>
+         <contact-email>coastal.info@noaa.gov</contact-email>
+         <contact-address>2234 South Hobson Ave</contact-address>
+         <contact-address-city>Charleston</contact-address-city>
+         <contact-address-state>SC</contact-address-state>
+         <contact-address-zip>29405-2413</contact-address-zip>
+         <contact-phone-number>(843) 740-1202</contact-phone-number>
+         <contact-url>https://coast.noaa.gov</contact-url>
+         <contact-url-description>NOAA Office for Coastal Management Home Page</contact-url-description>
+         <contact-url-function>Online Resource</contact-url-function>
+      </support-role>
+      <support-role cc-id="630291" in-effect="Yes">
+         <support-role-type>Point of Contact</support-role-type>
+         <from-date>2013-05-21</from-date>
+         <contact-type>Organization</contact-type>
+         <contact-name>NOAA Office for Coastal Management</contact-name>
+         <contact-noaa-acronym>NOAA/OCM</contact-noaa-acronym>
+         <contact-email>coastal.info@noaa.gov</contact-email>
+         <contact-address>2234 South Hobson Ave</contact-address>
+         <contact-address-city>Charleston</contact-address-city>
+         <contact-address-state>SC</contact-address-state>
+         <contact-address-zip>29405-2413</contact-address-zip>
+         <contact-phone-number>(843) 740-1202</contact-phone-number>
+         <contact-url>https://coast.noaa.gov</contact-url>
+         <contact-url-description>NOAA Office for Coastal Management Home Page</contact-url-description>
+         <contact-url-function>Online Resource</contact-url-function>
+      </support-role>
+   </support-roles>
+   <extents>
+      <currentness-reference>Date of Landsat Scenes</currentness-reference>
+      <extent cc-id="630294">
+         <geographic-areas>
+            <geographic-area cc-id="630296">
+               <west-bound>-129.64</west-bound>
+               <east-bound>-66.01</east-bound>
+               <north-bound>51.07</north-bound>
+               <south-bound>22.6</south-bound>
+            </geographic-area>
+         </geographic-areas>
+         <time-frames>
+            <time-frame cc-id="630295">
+               <time-frame-type>Range</time-frame-type>
+               <start-date-time>2009-01-20</start-date-time>
+               <end-date-time>2011-11-11</end-date-time>
+            </time-frame>
+         </time-frames>
+      </extent>
+   </extents>
+   <access-information>
+      <security-class>Unclassified</security-class>
+      <data-access-constraints>None</data-access-constraints>
+      <data-use-constraints>Data set is not for use in litigation. While efforts have been made to ensure that these data are accurate and reliable, NOAA, cannot assume liability for any damages, or misrepresentations, caused by any inaccuracies in the data. NOAA makes no warranty, expressed or implied, nor does the fact of distribution constitute such a warranty.</data-use-constraints>
+   </access-information>
+   <distribution-information>
+      <distribution cc-id="744890">
+         <download-url>https://coast.noaa.gov/dataviewer/#/imagery/search/where:ID=1470</download-url>
+         <file-name>Customized Download</file-name>
+         <description>Create custom data files by choosing area, map projection, file format, etc.</description>
+      </distribution>
+   </distribution-information>
+   <urls>
+      <url cc-id="744894">
+         <url>https://coast.noaa.gov/digitalcoast/data/ccapregional.html</url>
+         <url-type>Online Resource</url-type>
+      </url>
+      <url cc-id="744892">
+         <url>https://coast.noaa.gov/digitalcoast/data/home.html</url>
+         <url-type>Online Resource</url-type>
+      </url>
+      <url cc-id="744893">
+         <url>https://coast.noaa.gov/htdata/raster1/landcover/bulkdownload/30m_lc/</url>
+         <url-type>Online Resource</url-type>
+      </url>
+   </urls>
+   <activity-logs>
+      <activity-log cc-id="630372">
+         <activity-date-time>2017-08-17</activity-date-time>
+         <description>Date that the source FGDC record was last modified.</description>
+      </activity-log>
+      <activity-log cc-id="630371">
+         <activity-date-time>2017-11-14</activity-date-time>
+         <description>Converted from FGDC CSDGM (version FGDC-STD-001-1998) using 'fgdc_to_inport_xml.pl' script. Contact Tyler Christensen (NOS) for details.</description>
+      </activity-log>
+      <activity-log cc-id="744891">
+         <activity-date-time>2018-03-13</activity-date-time>
+         <description>Partial upload to move data access links to Distribution Info.</description>
+      </activity-log>
+   </activity-logs>
+   <technical-environment>
+      <description>Microsoft Windows XP Version 5.1 (Build 2600) Service Pack 2; ESRI ArcCatalog 9.1.0.780</description>
+   </technical-environment>
+   <data-quality>
+      <accuracy>A total of 7636 accuracy assessment sample locations were identified in the 2010 land cover product.  These locations were placed via a stratified random sample, with a 6-out-of-9 (or greater) homogeneity of 2010 in a 3x3 pixel window enforced. A standard error matrix was created and the overall map accuracy was 82.0%.  Individual land cover class accuracies are below, with Class Number Class Name (user's accuracy, producer's accuracy).
+
+
+0 Background (N/A, N/A), 1 Unclassified (N/A, N/A), 2 High Intensity Developed (95.6, 89.0), 3 Medium Intensity Developed (83.2, 94.5), 4 Low Intensity Developed (85.0, 93.2), 5 Developed Open Space (84.3, 79.1) 6 Cultivated Land (81.8, 84.2), 7 Pasture/Hay (67.5, 76.2), 8 Grassland (78.4, 68.0), 9 Deciduous Forest (84.2, 87.4), 10 Evergreen Forest (78.8, 87.8), 11 Mixed Forest (82.6, 70.7), 12 Scrub/Shrub (70.9, 64.0), 13 Palustrine Forested Wetland (87.3, 85.9), 14 Palustrine Scrub/Shrub Wetland (79.7, 83.0), 15 Palustrine Emergent Wetland (79.2, 78.0), 16 Estuarine Forested Wetland (95.2, 100), 17 Estuarine Scrub/Shrub Wetland (85.2, 85.2), 18 Estuarine Emergent Wetland (88.9, 91.8), 19 Unconsolidated Shore (76.8, 90.3), 20 Bare Land (81.5, 79.7), 21 Open Water (93.7, 88.0), 22 Palustrine Aquatic Bed (73.2, 75.9), 23 Estuarine Aquatic Bed (90.3, 94.9), 24 Tundra (N/A, N/A), 25 Snow/Ice (100, 59.1)</accuracy>
+      <completeness-report>Data does not exist for all classes. Class 1 (Unclassified) is intentionally left blank. All pixels have been  classified.</completeness-report>
+      <conceptual-consistency>Tests for logical consistency indicate that all row and column positions in the selected  latitude/longitude window contain data. Conversion and integration with vector files indicates that all positions are consistent with  earth coordinates covering the same area. Attribute files are logically consistent.</conceptual-consistency>
+   </data-quality>
+   <lineage>
+      <lineage-sources>
+         <lineage-source cc-id="630282">
+            <citation-title>Landsat Thematic Mapper satellite imagery</citation-title>
+            <contact-name>United States Geological Survey</contact-name>
+            <publish-date>2013-05-21</publish-date>
+            <extent-type>Range</extent-type>
+            <extent-start-date-time>2009-01-20</extent-start-date-time>
+            <extent-end-date-time>2011-11-11</extent-end-date-time>
+            <citation-url>http://glovis.usgs.gov/</citation-url>
+            <source-contribution>Landsat TM satellite imagery were used for image interpretation and classification | Type of Source Media: DVD/CD-ROM/online</source-contribution>
+         </lineage-source>
+      </lineage-sources>
+      <lineage-process-steps>
+         <lineage-process-step cc-id="630283">
+            <sequence-number>1</sequence-number>
+            <description>C-CAP data sets have always been created using standardized and repeatable methods to ensure consistency across eras of land cover. The 2016 C-CAP land cover update cycle was different from previous approaches. The United States Geological Survey (USGS) produced its National Land Cover Database (NLCD) 2016 update prior to C-CAP updating the coastal areas, in addition to remapping all previous dates of their land cover. There were significant changes made to all dates of NLCD land cover, resulting corresponding differences to existing C-CAP data holdings. A multi-step approach was taken to create new C-CAP land cover data sets, incorporating improvements from the NLCD, adding C-CAP wetland categories, and multiple quality assurance steps to ensure quality.
+
+The first step was to normalize the difference between the existing 2010 C-CAP and new NLCD 2010 land cover. Areas of difference were examined to identify improvements to be kept, and areas which need additional work. Logic models were initially used to keep the best features from NLCD. Areas needing improvement were isolated and modeled through a series of object-based processing, spectral analysis, and finally hand-edits.  The end result was a new 2010 C-CAP land cover product.
+
+Areas of possible change to 2006 were then identified by combining NLCD changes (2006-2010) and C-CAP changes (2006-2010). These possible change areas were then modeled through a similar approach to the 2010 land cover (logic models, object-based processing, spectral analysis, and hand-edits). These steps resulted in a finalized 2006 land cover. A similar approach was used to create the 2001 and 1996 land cover. The 1996 land cover did not have a corresponding NLCD date, thus possible change areas were identified through using only the original C-CAP 1996-2001 change.</description>
+            <process-date-time>2020-03-01T00:00:00</process-date-time>
+         </lineage-process-step>
+      </lineage-process-steps>
+   </lineage>
+   <child-items>
+      <child-item>
+         <catalog-item-id>49095</catalog-item-id>
+         <catalog-item-type>Entity</catalog-item-type>
+         <title>Coastal United States</title>
+      </child-item>
+   </child-items>
+   <catalog-details>
+      <metadata-record-created-by pers-id="19064">Anne Ball</metadata-record-created-by>
+      <metadata-record-created>2017-11-14T14:38:57</metadata-record-created>
+      <metadata-record-last-modified-by pers-id="20138">Erik Hund</metadata-record-last-modified-by>
+      <metadata-record-last-modified>2020-04-24T14:01:18</metadata-record-last-modified>
+      <record-published>2018-03-13</record-published>
+      <owner-organization>Office for Coastal Management</owner-organization>
+      <owner-organization-acronym>OCM</owner-organization-acronym>
+      <owner-organization-address/>
+      <owner-organization-address-city/>
+      <owner-organization-address-state/>
+      <owner-organization-address-zip/>
+      <owner-organization-address-country/>
+      <owner-organization-phone/>
+      <owner-organization-url/>
+      <owner-organization-business-hours/>
+      <owner-organization-group-id>1002</owner-organization-group-id>
+      <publication-status>Public</publication-status>
+      <is-do-not-publish>No</is-do-not-publish>
+      <metadata-next-review-date>2019-03-14</metadata-next-review-date>
+   </catalog-details>
+</inport-metadata>

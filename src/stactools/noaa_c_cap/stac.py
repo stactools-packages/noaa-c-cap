@@ -2,11 +2,11 @@ import datetime
 import logging
 from typing import List, Optional
 
-from pystac import Collection, Extent, Item, MediaType
-from pystac.asset import Asset
+from pystac import Collection, Extent, Item, MediaType, Asset
+from pystac.extensions.label import LabelExtension, LabelClasses, LabelType
 from stactools.core import create
 
-from stactools.noaa_c_cap import Dataset, utils
+from stactools.noaa_c_cap import Dataset, utils, Metadata
 from stactools.noaa_c_cap.constants import (COLLECTION_DESCRIPTION,
                                             COLLECTION_ID,
                                             COLLECTION_PROVIDERS,
@@ -70,4 +70,12 @@ def create_item_from_dataset(dataset: Dataset) -> Item:
             Asset(dataset.xml_href,
                   media_type=MediaType.XML,
                   roles=['metadata']))
+        label = LabelExtension.ext(item, add_if_missing=True)
+        metadata = Metadata(dataset.xml_href)
+        label.label_properties = None
+        label.label_description = "Land cover classes"
+        label.label_type = LabelType.RASTER
+        label.label_classes = [
+            LabelClasses.create(name='classes', classes=list(metadata.classes))
+        ]
     return item

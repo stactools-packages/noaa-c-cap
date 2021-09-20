@@ -54,3 +54,17 @@ class StacTest(unittest.TestCase):
         self.assertEqual(metadata.media_type, MediaType.XML)
         self.assertEqual(metadata.roles, ['metadata'])
         item.validate()
+
+    def test_create_item_2010(self):
+        tiff_path = test_data.get_external_data(
+            'conus_2016_ccap_landcover_20200311.tif')
+        xml_path = test_data.get_path('data-files/CCAP_Parent_2010.xml')
+        item = stac.create_item(tiff_path, xml_path)
+        item.validate()
+
+    def test_create_item_puerto_rico(self):
+        tiff_path = test_data.get_external_data(
+            'pr_2010_ccap_hr_land_cover20170214_30m.tif')
+        xml_path = test_data.get_path('data-files/2010_puerto_rico_ccap.xml')
+        item = stac.create_item(tiff_path, xml_path)
+        item.validate()
