@@ -41,3 +41,6 @@ indent_size = 2
 [tests/data-files/*.xml]
 indent_size = unset
 trim_trailing_whitespace = false
+
+[examples/**/*.json]
+insert_final_newline = unset
