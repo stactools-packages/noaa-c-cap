@@ -88,7 +88,7 @@ def create_noaa_c_cap_command(cli):
         """Downloads the source data to a target directory.
 
         Args:
-            destinatino (str): A local directory into which the data will downloaded.
+            destination (str): A local directory into which the data will downloaded.
         """
         os.makedirs(destination, exist_ok=True)
         for url in utils.urls():
