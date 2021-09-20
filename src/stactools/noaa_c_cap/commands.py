@@ -1,6 +1,6 @@
 import logging
 import os
-from typing import Optional, List
+from typing import Optional, List, Tuple
 
 import click
 import requests
@@ -26,14 +26,22 @@ def create_noaa_c_cap_command(cli):
     )
     @click.argument("destination")
     @click.option('--href', '-h', multiple=True)
-    def create_collection_command(destination: str, href: List[str]):
+    @click.option('--directory',
+                  '-d',
+                  help='Directory containing NOAA C-CAP files')
+    def create_collection_command(destination: str, href: Tuple[str],
+                                  directory: Optional[str]):
         """Creates a STAC Collection
         Args:
             destination (str): An HREF for the Collection JSON
         """
-        collection = stac.create_collection(hrefs=href)
-        collection.set_self_href(destination)
-        collection.normalize_and_save(os.path.dirname(destination))
+        hrefs = list(href)
+        if directory:
+            hrefs.extend(
+                os.path.join(os.path.abspath(directory), file_name)
+                for file_name in os.listdir(directory))
+        collection = stac.create_collection(hrefs=hrefs)
+        collection.normalize_and_save(destination)
 
     @noaa_c_cap.command("create-item", short_help="Create a STAC item")
     @click.argument("source")
