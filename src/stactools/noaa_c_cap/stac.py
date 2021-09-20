@@ -8,7 +8,10 @@ from stactools.core import create
 
 from stactools.noaa_c_cap import Dataset, utils
 from stactools.noaa_c_cap.constants import (COLLECTION_DESCRIPTION,
-                                            COLLECTION_ID)
+                                            COLLECTION_ID,
+                                            COLLECTION_PROVIDERS,
+                                            COLLECTION_TITLE,
+                                            COLLECTION_KEYWORDS)
 
 logger = logging.getLogger(__name__)
 
@@ -27,8 +30,11 @@ def create_collection(hrefs: Optional[List[str]] = None) -> Collection:
     items = [create_item_from_dataset(dataset) for dataset in datasets]
     extent = Extent.from_items(items)
     collection = Collection(id=COLLECTION_ID,
+                            title=COLLECTION_TITLE,
                             description=COLLECTION_DESCRIPTION,
-                            extent=extent)
+                            extent=extent,
+                            keywords=COLLECTION_KEYWORDS,
+                            providers=COLLECTION_PROVIDERS)
     collection.add_items(items)
     return collection
 

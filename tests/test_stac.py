@@ -18,6 +18,8 @@ class StacTest(unittest.TestCase):
         ]
         collection = stac.create_collection(hrefs)
         self.assertEqual(collection.id, 'noaa-c-cap')
+        self.assertEqual(collection.title,
+                         "C-CAP Regional Land Cover and Change")
         self.assertEqual(len(list(collection.get_all_items())), 1)
         with TemporaryDirectory() as directory:
             collection.normalize_hrefs(
