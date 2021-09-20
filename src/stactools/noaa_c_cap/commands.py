@@ -1,5 +1,6 @@
 import logging
 import os
+from tempfile import TemporaryDirectory
 from typing import Optional, Tuple
 
 import click
@@ -84,20 +85,34 @@ def create_noaa_c_cap_command(cli):
         "download",
         short_help="Download NOAA C-CAP data into a target directory")
     @click.argument("destination")
-    def download_command(destination: str) -> None:
+    @click.option('--cogify/--no-cogify',
+                  help="Convert the .tifs to COGs after download",
+                  default=False)
+    def download_command(destination: str, cogify: bool) -> None:
         """Downloads the source data to a target directory.
 
         Args:
             destination (str): A local directory into which the data will downloaded.
         """
         os.makedirs(destination, exist_ok=True)
-        for url in utils.urls():
-            file_name = os.path.basename(url)
-            path = os.path.join(destination, file_name)
-            print(f"Downloading {url} to {path}")
-            with open(path, 'wb') as f:
-                response = requests.get(url, stream=True)
-                for chunk in response.iter_content(chunk_size=1024):
-                    f.write(chunk)
+        with TemporaryDirectory() as temporary_directory:
+            for url in utils.urls():
+                file_name = os.path.basename(url)
+                final_path = os.path.join(destination, file_name)
+                print(f"Downloading {url} to {final_path}")
+                download_to_temporary_directory = cogify and os.path.splitext(
+                    file_name)[1] == '.tif'
+                if download_to_temporary_directory:
+                    download_path = os.path.join(temporary_directory,
+                                                 file_name)
+                else:
+                    download_path = final_path
+                with open(download_path, 'wb') as f:
+                    response = requests.get(url, stream=True)
+                    for chunk in response.iter_content(chunk_size=1024):
+                        f.write(chunk)
+                if download_to_temporary_directory:
+                    stactools.core.utils.convert.cogify(
+                        download_path, final_path)
 
     return noaa_c_cap
