@@ -1,0 +1,130 @@
+{
+  "type": "Feature",
+  "stac_version": "1.0.0",
+  "id": "pr_2010_ccap_hr_land_cover20170214_30m",
+  "properties": {
+    "proj:epsg": 32161,
+    "proj:transform": [
+      30.0,
+      0.0,
+      109462.0,
+      0.0,
+      -30.0,
+      278276.000000004
+    ],
+    "proj:shape": [
+      2376,
+      7252
+    ],
+    "start_datetime": "2010-01-01T00:00:00Z",
+    "end_datetime": "2010-12-31T00:00:00Z",
+    "label:properties": null,
+    "label:description": "Land cover classes",
+    "label:type": "raster",
+    "label:classes": [
+      {
+        "classes": [
+          "Unclassified",
+          "Unclassified",
+          "High Intensity Developed",
+          "Medium Intensity Developed",
+          "Low Intensity Developed",
+          "Open Spaces Developed",
+          "Cultivated Land",
+          "Pasture/Hay",
+          "Grassland",
+          "Deciduous Forest",
+          "Evergreen Forest",
+          "Mixed Forest",
+          "Scrub/Shrub",
+          "Palustrine Forested Wetland",
+          "Palustrine Scrub/Shrub Wetland",
+          "Palustrine Emergent Wetland",
+          "Estuarine Forest Wetland",
+          "Estuarine Scrub/Shrub Wetland",
+          "Estuarine Emergent",
+          "Unconsolidated Shore",
+          "Bare Land",
+          "Water",
+          "Palustrine Aquatic Bed",
+          "Estuarine Aquatic Bed",
+          "Tundra",
+          "Snow/Ice"
+        ],
+        "name": "classes"
+      }
+    ],
+    "datetime": "2010-01-01T00:00:00Z"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -65.234665,
+          17.892786
+        ],
+        [
+          -65.230246,
+          18.536775
+        ],
+        [
+          -67.290869,
+          18.538629
+        ],
+        [
+          -67.287719,
+          17.894634
+        ],
+        [
+          -65.234665,
+          17.892786
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://coast.noaa.gov/htdata/raster1/landcover/bulkdownload/30m_lc/pr_2010_ccap_hr_land_cover20170214_30m.tif",
+      "type": "image/tiff; application=geotiff",
+      "roles": [
+        "data"
+      ]
+    },
+    "metadata": {
+      "href": "https://coast.noaa.gov/htdata/raster1/landcover/bulkdownload/30m_lc/2010_puerto_rico_ccap.xml",
+      "type": "application/xml",
+      "roles": [
+        "metadata"
+      ]
+    }
+  },
+  "bbox": [
+    -67.290869,
+    17.892786,
+    -65.230246,
+    18.538629
+  ],
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/label/v1.0.0/schema.json"
+  ],
+  "collection": "noaa-c-cap"
+}

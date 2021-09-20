@@ -1,0 +1,130 @@
+{
+  "type": "Feature",
+  "stac_version": "1.0.0",
+  "id": "conus_1975_ccap_landcover_20200311",
+  "properties": {
+    "proj:epsg": 5070,
+    "proj:transform": [
+      30.0,
+      0.0,
+      113055.0,
+      0.0,
+      -30.0,
+      2855745.0
+    ],
+    "proj:shape": [
+      29172,
+      54586
+    ],
+    "start_datetime": "1975-01-01T00:00:00Z",
+    "end_datetime": "1975-12-31T00:00:00Z",
+    "label:properties": null,
+    "label:description": "Land cover classes",
+    "label:type": "raster",
+    "label:classes": [
+      {
+        "classes": [
+          "Background",
+          "Unclassified (Cloud, Shadow, etc)",
+          "High Intensity Developed",
+          "Medium Intensity Developed",
+          "Low Intensity Developed",
+          "Developed Open Space",
+          "Cultivated Land",
+          "Pasture/Hay",
+          "Grassland",
+          "Deciduous Forest",
+          "Evergreen Forest",
+          "Mixed Forest",
+          "Scrub/Shrub",
+          "Palustrine Forested Wetland",
+          "Palustrine Scrub/Shrub Wetland",
+          "Palustrine Emergent Wetland",
+          "Estuarine Forested Wetland",
+          "Estuarine Scrub/Shrub Wetland",
+          "Estuarine Emergent Wetland",
+          "Unconsolidated Shore",
+          "Bare Land",
+          "Open Water",
+          "Palustrine Aquatic Bed",
+          "Estuarine Aquatic Bed",
+          "Tundra",
+          "Snow/Ice"
+        ],
+        "name": "classes"
+      }
+    ],
+    "datetime": "1975-01-01T00:00:00Z"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -75.397752,
+          39.135332
+        ],
+        [
+          -72.942379,
+          46.770828
+        ],
+        [
+          -94.481158,
+          48.696281
+        ],
+        [
+          -94.648367,
+          40.828455
+        ],
+        [
+          -75.397752,
+          39.135332
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://coast.noaa.gov/htdata/raster1/landcover/bulkdownload/30m_lc/conus_1975_ccap_landcover_20200311.tif",
+      "type": "image/tiff; application=geotiff",
+      "roles": [
+        "data"
+      ]
+    },
+    "metadata": {
+      "href": "https://coast.noaa.gov/htdata/raster1/landcover/bulkdownload/30m_lc/CCAP_Parent_1975.xml",
+      "type": "application/xml",
+      "roles": [
+        "metadata"
+      ]
+    }
+  },
+  "bbox": [
+    -94.648367,
+    39.135332,
+    -72.942379,
+    48.696281
+  ],
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/label/v1.0.0/schema.json"
+  ],
+  "collection": "noaa-c-cap"
+}

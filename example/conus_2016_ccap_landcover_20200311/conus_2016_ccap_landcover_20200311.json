@@ -1,0 +1,186 @@
+{
+  "type": "Feature",
+  "stac_version": "1.0.0",
+  "id": "conus_2016_ccap_landcover_20200311",
+  "properties": {
+    "proj:epsg": 5070,
+    "proj:transform": [
+      29.99999999983544,
+      0.0,
+      -2362065.0,
+      0.0,
+      -29.999999999823203,
+      3177734.999303
+    ],
+    "proj:shape": [
+      97471,
+      154951
+    ],
+    "start_datetime": "2016-01-01T00:00:00Z",
+    "end_datetime": "2016-12-31T00:00:00Z",
+    "label:properties": null,
+    "label:description": "Land cover classes",
+    "label:type": "raster",
+    "label:classes": [
+      {
+        "classes": [
+          "Unclassified",
+          "Unclassified to Unclassified",
+          "Unclassified to High Intensity Developed",
+          "Unclassified to Medium Intensity Developed",
+          "Unclassified to Low Intensity Developed",
+          "Unclassified to Open Space Developed",
+          "Unclassified to Cultivated Land",
+          "Unclassified to Pasture/Hay",
+          "Unclassified to Grassland",
+          "Unclassified to Deciduous Forest",
+          "Unclassified to Evergreen Forest",
+          "Unclassified to Mixed Forest",
+          "Unclassified to Scrub/Shrub",
+          "Unclassified to Palustrine Forested Wetland",
+          "Unclassified to Palustrine Scrub/Shrub Wetland",
+          "Unclassified to Palustrine Emergent Wetland",
+          "Unclassified to Estuarine Forested Wetland",
+          "Unclassified to Estuarine Scrub/Shrub Wetland",
+          "Unclassified to Estuarine Emergent Wetland",
+          "Unclassified to Unconsolidated Shore",
+          "Unclassified to Bare Land",
+          "Unclassified to Water",
+          "Unclassified to Palustrine Aquatic Bed",
+          "Unclassified to Estuarine Aquatic Bed",
+          "Unclassified to Tundra",
+          "Unclassified to Snow/Ice",
+          "High Intensity Developed to Unclassified",
+          "High Intensity Developed to High Intensity Developed",
+          "High Intensity Developed to Medium Intensity Developed",
+          "High Intensity Developed to Low Intensity Developed",
+          "High Intensity Developed to Open Space Developed",
+          "High Intensity Developed to Cultivated Land",
+          "High Intensity Developed to Pasture/Hay",
+          "High Intensity Developed to Grassland",
+          "High Intensity Developed to Deciduous Forest",
+          "High Intensity Developed to Evergreen Forest",
+          "High Intensity Developed to Mixed Forest",
+          "High Intensity Developed to Scrub/Shrub",
+          "High Intensity Developed to Palustrine Forested Wetland",
+          "High Intensity Developed to Palustrine Scrub/Shrub Wetland",
+          "High Intensity Developed to Palustrine Emergent Wetland",
+          "High Intensity Developed to Estuarine Forested Wetland",
+          "High Intensity Developed to Estuarine Scrub/Shrub Wetland",
+          "High Intensity Developed to Estuarine Emergent Wetland",
+          "High Intensity Developed to Unconsolidated Shore",
+          "High Intensity Developed to Bare Land",
+          "High Intensity Developed to Water",
+          "High Intensity Developed to Palustrine Aquatic Bed",
+          "High Intensity Developed to Estuarine Aquatic Bed",
+          "High Intensity Developed to Tundra",
+          "High Intensity Developed to Snow/Ice",
+          "Medium Intensity Developed to Unclassified",
+          "Medium Intensity Developed to High Intensity Developed",
+          "Medium Intensity Developed to Medium Intensity Developed",
+          "Medium Intensity Developed to Low Intensity Developed",
+          "Medium Intensity Developed to Open Space Developed",
+          "Medium Intensity Developed to Cultivated Land",
+          "Medium Intensity Developed to Pasture/Hay",
+          "Medium Intensity Developed to Grassland",
+          "Medium Intensity Developed to Deciduous Forest",
+          "Medium Intensity Developed to Evergreen Forest",
+          "Medium Intensity Developed to Mixed Forest",
+          "Medium Intensity Developed to Scrub/Shrub",
+          "Medium Intensity Developed to Palustrine Forested Wetland",
+          "Medium Intensity Developed to Palustrine Scrub/Shrub Wetland",
+          "Medium Intensity Developed to Palustrine Emergent Wetland",
+          "Medium Intensity Developed to Estuarine Forested Wetland",
+          "Medium Intensity Developed to Estuarine Scrub/Shrub Wetland",
+          "Medium Intensity Developed to Estuarine Emergent Wetland",
+          "Medium Intensity Developed to Unconsolidated Shore",
+          "Medium Intensity Developed to Bare Land",
+          "Medium Intensity Developed to Water",
+          "Medium Intensity Developed to Palustrine Aquatic Bed",
+          "Medium Intensity Developed to Estuarine Aquatic Bed",
+          "Medium Intensity Developed to Tundra",
+          "Medium Intensity Developed to Snow/Ice",
+          "Low Intensity Developed to Unclassified",
+          "Low Intensity Developed to High Intensity Developed",
+          "Low Intensity Developed to Medium Intensity Developed",
+          "Low Intensity Developed to Low Intensity Developed",
+          "Low Intensity Developed to Open Space Developed",
+          "Lo"
+        ],
+        "name": "classes"
+      }
+    ],
+    "datetime": "2016-01-01T00:00:00Z"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -73.946445,
+          22.881337
+        ],
+        [
+          -64.966857,
+          48.207712
+        ],
+        [
+          -127.984554,
+          47.984468
+        ],
+        [
+          -118.755598,
+          22.718719
+        ],
+        [
+          -73.946445,
+          22.881337
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://coast.noaa.gov/htdata/raster1/landcover/bulkdownload/30m_lc/conus_2016_ccap_landcover_20200311.tif",
+      "type": "image/tiff; application=geotiff",
+      "roles": [
+        "data"
+      ]
+    },
+    "metadata": {
+      "href": "https://coast.noaa.gov/htdata/raster1/landcover/bulkdownload/30m_lc/CCAP_Parent_2016.xml",
+      "type": "application/xml",
+      "roles": [
+        "metadata"
+      ]
+    }
+  },
+  "bbox": [
+    -127.984554,
+    22.718719,
+    -64.966857,
+    48.207712
+  ],
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/label/v1.0.0/schema.json"
+  ],
+  "collection": "noaa-c-cap"
+}

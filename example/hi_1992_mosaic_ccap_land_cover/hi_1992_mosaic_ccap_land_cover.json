@@ -1,0 +1,86 @@
+{
+  "type": "Feature",
+  "stac_version": "1.0.0",
+  "id": "hi_1992_mosaic_ccap_land_cover",
+  "properties": {
+    "proj:epsg": 32604,
+    "proj:transform": [
+      30.0,
+      0.0,
+      364414.0,
+      0.0,
+      -30.0,
+      2459033.941690528
+    ],
+    "proj:shape": [
+      12209,
+      19278
+    ],
+    "start_datetime": "1992-01-01T00:00:00Z",
+    "end_datetime": "1992-12-31T00:00:00Z",
+    "datetime": "1992-01-01T00:00:00Z"
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -154.799319,
+          18.879599
+        ],
+        [
+          -154.708061,
+          22.180134
+        ],
+        [
+          -160.315615,
+          22.231444
+        ],
+        [
+          -160.287549,
+          18.922659
+        ],
+        [
+          -154.799319,
+          18.879599
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://coast.noaa.gov/htdata/raster1/landcover/bulkdownload/30m_lc/hi_1992_mosaic_ccap_land_cover.tif",
+      "type": "image/tiff; application=geotiff",
+      "roles": [
+        "data"
+      ]
+    }
+  },
+  "bbox": [
+    -160.315615,
+    18.879599,
+    -154.708061,
+    22.231444
+  ],
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v1.0.0/schema.json"
+  ],
+  "collection": "noaa-c-cap"
+}

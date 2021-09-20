@@ -1,0 +1,113 @@
+{
+  "type": "Collection",
+  "id": "noaa-c-cap",
+  "stac_version": "1.0.0",
+  "description": "Nationally standardized, raster-based inventories of\nland cover for the coastal areas of the U.S.  Data are derived, through the\nCoastal Change Analysis Program, from the analysis of multiple dates of remotely\nsensed imagery.  Two file types are available: individual dates that supply a\nwall-to-wall map, and change files that compare one date to another.\n\nThe use of standardized data and procedures assures consistency through time and\nacross geographies.  C-CAP data forms the coastal expression of the National\nLand Cover Database (NLCD) and the A-16 land cover theme of the National Spatial\nData Infrastructure.  The data are updated every 5 years.",
+  "links": [
+    {
+      "rel": "root",
+      "href": "./collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./conus_1975_ccap_landcover_20200311/conus_1975_ccap_landcover_20200311.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./conus_1985_ccap_landcover_20200311/conus_1985_ccap_landcover_20200311.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./conus_1996_ccap_landcover_20200311/conus_1996_ccap_landcover_20200311.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./conus_2001_ccap_landcover_20200311/conus_2001_ccap_landcover_20200311.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./conus_2006_ccap_landcover_20200311/conus_2006_ccap_landcover_20200311.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./conus_2010_ccap_landcover_20200311/conus_2010_ccap_landcover_20200311.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./conus_2016_ccap_landcover_20200311/conus_2016_ccap_landcover_20200311.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./hi_1992_mosaic_ccap_land_cover/hi_1992_mosaic_ccap_land_cover.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./hi_2001_mosaic_ccap_land_cover/hi_2001_mosaic_ccap_land_cover.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./hi_2005_mosaic_ccap_land_cover/hi_2005_mosaic_ccap_land_cover.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./pr_2010_ccap_hr_land_cover20170214_30m/pr_2010_ccap_hr_land_cover20170214_30m.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./conus_1992_ccap_landcover_20201019/conus_1992_ccap_landcover_20201019.json",
+      "type": "application/json"
+    }
+  ],
+  "stac_extensions": [],
+  "title": "C-CAP Regional Land Cover and Change",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -160.315986,
+          17.892786,
+          -64.966857,
+          49.471148
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "1975-01-01T00:00:00Z",
+          "2016-12-31T00:00:00Z"
+        ]
+      ]
+    }
+  },
+  "license": "proprietary",
+  "keywords": [
+    "landcover",
+    "coastal",
+    "change"
+  ],
+  "providers": [
+    {
+      "name": "National Oceanic and Atmospheric Administration, Office for Coastal Management",
+      "roles": [
+        "licensor",
+        "producer",
+        "processor",
+        "host"
+      ],
+      "url": "https://coast.noaa.gov/digitalcoast/data/ccapregional.html"
+    }
+  ]
+}
