@@ -3,6 +3,7 @@ import logging
 from typing import Optional, List
 
 from pystac import Item, MediaType, Collection, Extent
+from pystac.asset import Asset
 from stactools.core import create
 
 from stactools.noaa_c_cap import Metadata, utils, Dataset
@@ -56,4 +57,10 @@ def create_item_from_dataset(dataset: Dataset) -> Item:
     data = item.assets.get('data')
     assert data
     data.media_type = MediaType.GEOTIFF
+    if dataset.xml_href:
+        item.add_asset(
+            'metadata',
+            Asset(dataset.xml_href,
+                  media_type=MediaType.XML,
+                  roles=['metadata']))
     return item

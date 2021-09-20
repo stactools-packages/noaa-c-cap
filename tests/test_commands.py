@@ -20,8 +20,8 @@ class CommandsTest(CliTestCase):
         with TemporaryDirectory() as tmp_dir:
             destination = os.path.join(tmp_dir, "collection.json")
             result = self.run_command([
-                "noaa-c-cap", "create-collection", destination, '-h', path,
-                '-h', xml_path
+                "noaa-c-cap", "create-collection", tmp_dir, '-h', path, '-h',
+                xml_path
             ])
             self.assertEqual(result.exit_code,
                              0,

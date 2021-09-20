@@ -40,6 +40,7 @@ class StacTest(unittest.TestCase):
             datetime.datetime(2016, 12, 31, tzinfo=datetime.timezone.utc))
         data = item.assets['data']
         self.assertEqual(data.media_type, MediaType.GEOTIFF)
+        self.assertEqual(data.roles, ['data'])
         item.validate()
 
     def test_create_item_with_xml(self):
@@ -47,4 +48,7 @@ class StacTest(unittest.TestCase):
             'conus_2016_ccap_landcover_20200311.tif')
         xml_path = test_data.get_path('data-files/CCAP_Parent_2016.xml')
         item = stac.create_item(tiff_path, xml_path)
+        metadata = item.assets['metadata']
+        self.assertEqual(metadata.media_type, MediaType.XML)
+        self.assertEqual(metadata.roles, ['metadata'])
         item.validate()
