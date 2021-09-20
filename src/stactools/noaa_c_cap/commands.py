@@ -1,10 +1,12 @@
 import logging
 import os
-from typing import Optional, List, Tuple
+from typing import Optional, Tuple
 
 import click
 import requests
 import stactools.core.utils.convert
+from click.types import Choice
+from pystac.catalog import CatalogType
 
 from stactools.noaa_c_cap import stac, utils
 
@@ -29,8 +31,15 @@ def create_noaa_c_cap_command(cli):
     @click.option('--directory',
                   '-d',
                   help='Directory containing NOAA C-CAP files')
+    @click.option('--catalog-type',
+                  type=Choice([
+                      'ABSOLUTE_PUBLISHED', 'RELATIVE_PUBLISHED',
+                      'SELF_CONTAINED'
+                  ]),
+                  default='ABSOLUTE_PUBLISHED')
     def create_collection_command(destination: str, href: Tuple[str],
-                                  directory: Optional[str]):
+                                  directory: Optional[str],
+                                  catalog_type: CatalogType):
         """Creates a STAC Collection
         Args:
             destination (str): An HREF for the Collection JSON
@@ -41,6 +50,7 @@ def create_noaa_c_cap_command(cli):
                 os.path.join(os.path.abspath(directory), file_name)
                 for file_name in os.listdir(directory))
         collection = stac.create_collection(hrefs=hrefs)
+        collection.catalog_type = catalog_type
         collection.normalize_and_save(destination)
 
     @noaa_c_cap.command("create-item", short_help="Create a STAC item")

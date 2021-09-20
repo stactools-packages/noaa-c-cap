@@ -1,7 +1,7 @@
 import datetime
 import os.path
-from tempfile import TemporaryDirectory
 import unittest
+from tempfile import TemporaryDirectory
 
 from pystac import MediaType
 

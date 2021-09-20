@@ -1,4 +1,3 @@
-import datetime
 import os.path
 from tempfile import TemporaryDirectory
 
