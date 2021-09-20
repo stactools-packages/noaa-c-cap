@@ -2,16 +2,15 @@ import datetime
 import logging
 from typing import List, Optional
 
-from pystac import Collection, Extent, Item, MediaType, Asset
-from pystac.extensions.label import LabelExtension, LabelClasses, LabelType
+from pystac import Asset, Collection, Extent, Item, MediaType
+from pystac.extensions.label import LabelClasses, LabelExtension, LabelType
 from stactools.core import create
 
-from stactools.noaa_c_cap import Dataset, utils, Metadata
+from stactools.noaa_c_cap import Dataset, Metadata, utils
 from stactools.noaa_c_cap.constants import (COLLECTION_DESCRIPTION,
-                                            COLLECTION_ID,
+                                            COLLECTION_ID, COLLECTION_KEYWORDS,
                                             COLLECTION_PROVIDERS,
-                                            COLLECTION_TITLE,
-                                            COLLECTION_KEYWORDS)
+                                            COLLECTION_TITLE)
 
 logger = logging.getLogger(__name__)
 
