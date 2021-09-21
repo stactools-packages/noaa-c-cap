@@ -3,6 +3,7 @@ import logging
 from typing import List, Optional
 
 from pystac import Asset, Collection, Extent, Item, MediaType
+from pystac.extensions.item_assets import AssetDefinition, ItemAssetsExtension
 from pystac.extensions.label import LabelClasses, LabelExtension, LabelType
 from stactools.core import create
 
@@ -35,6 +36,20 @@ def create_collection(hrefs: Optional[List[str]] = None) -> Collection:
                             keywords=COLLECTION_KEYWORDS,
                             providers=COLLECTION_PROVIDERS)
     collection.add_items(items)
+    item_assets = {}
+    for item in items:
+        for key, asset in item.get_assets().items():
+            asset_as_dict = asset.to_dict()
+            asset_as_dict.pop('href')
+            if key not in item_assets:
+                item_assets[key] = AssetDefinition(asset_as_dict)
+            elif item_assets[key].to_dict() != asset_as_dict:
+                logger.warning(f"Item Asset '{key}' does not match asset:\n"
+                               f"item_asset={item_assets[key].to_dict()}\n"
+                               f"asset={asset_as_dict}")
+
+    item_assets_ext = ItemAssetsExtension.ext(collection, add_if_missing=True)
+    item_assets_ext.item_assets = item_assets
     return collection
 
 

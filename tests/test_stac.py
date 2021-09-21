@@ -4,6 +4,7 @@ import unittest
 from tempfile import TemporaryDirectory
 
 from pystac import MediaType
+from pystac.extensions.item_assets import ItemAssetsExtension
 
 from stactools.noaa_c_cap import stac
 from tests import test_data
@@ -21,6 +22,11 @@ class StacTest(unittest.TestCase):
         self.assertEqual(collection.title,
                          "C-CAP Regional Land Cover and Change")
         self.assertEqual(len(list(collection.get_all_items())), 1)
+
+        item_assets = ItemAssetsExtension.ext(collection)
+        assert 'data' in item_assets.item_assets
+        assert 'metadata' in item_assets.item_assets
+
         with TemporaryDirectory() as directory:
             collection.normalize_hrefs(
                 os.path.join(directory, 'collection.json'))
