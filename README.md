@@ -34,3 +34,9 @@ Create the entire collection from the remote data sources:
 ```bash
 $ stac noaa-c-ccap create-collection destination-directory
 ```
+
+Creating the `examples/` directory
+
+```bash
+$ stac noaa-c-cap create-collection --catalog-type SELF_CONTAINED examples
+```
