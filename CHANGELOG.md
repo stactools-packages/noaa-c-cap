@@ -12,6 +12,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - Item Assets extension to the Collection
 - GSD to Items and Collections
 - Constant label classes
+- Scientific extension for a citation on the Collection
 
 ### Deprecated
 
