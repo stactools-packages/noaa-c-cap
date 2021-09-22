@@ -5,9 +5,10 @@ from tempfile import TemporaryDirectory
 
 from pystac import MediaType
 from pystac.extensions.item_assets import ItemAssetsExtension
+from pystac.extensions.scientific import ScientificExtension
 
 from stactools.noaa_c_cap import stac
-from stactools.noaa_c_cap.constants import LABEL_CLASSES
+from stactools.noaa_c_cap.constants import COLLECTION_CITATION, LABEL_CLASSES
 from tests import test_data
 
 
@@ -32,6 +33,9 @@ class StacTest(unittest.TestCase):
         item_assets = ItemAssetsExtension.ext(collection)
         assert 'data' in item_assets.item_assets
         assert 'metadata' in item_assets.item_assets
+
+        scientific = ScientificExtension.ext(collection)
+        self.assertEqual(scientific.citation, COLLECTION_CITATION)
 
         with TemporaryDirectory() as directory:
             collection.normalize_hrefs(

@@ -71,7 +71,8 @@
     }
   ],
   "stac_extensions": [
-    "https://stac-extensions.github.io/item-assets/v1.0.0/schema.json"
+    "https://stac-extensions.github.io/item-assets/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/scientific/v1.0.0/schema.json"
   ],
   "item_assets": {
     "data": {
@@ -87,6 +88,7 @@
       ]
     }
   },
+  "sci:citation": "National Oceanic and Atmospheric Administration, Office for Coastal Management. Name of Data Set: Coastal Change Analysis Program (C-CAP) Regional Land Cover. Charleston, SC: NOAA Office for Coastal Management. Accessed Month Year at www.coast.noaa.gov/htdata/raster1/landcover/bulkdownload/30m_lc/.",
   "title": "C-CAP Regional Land Cover and Change",
   "extent": {
     "spatial": {

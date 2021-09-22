@@ -5,10 +5,12 @@ from typing import List, Optional
 from pystac import Asset, Collection, Extent, Item, MediaType, Summaries
 from pystac.extensions.item_assets import AssetDefinition, ItemAssetsExtension
 from pystac.extensions.label import LabelClasses, LabelExtension, LabelType
+from pystac.extensions.scientific import ScientificExtension
 from stactools.core import create
 
 from stactools.noaa_c_cap import Dataset, utils
-from stactools.noaa_c_cap.constants import (COLLECTION_DESCRIPTION,
+from stactools.noaa_c_cap.constants import (COLLECTION_CITATION,
+                                            COLLECTION_DESCRIPTION,
                                             COLLECTION_ID, COLLECTION_KEYWORDS,
                                             COLLECTION_PROVIDERS,
                                             COLLECTION_TITLE, LABEL_CLASSES)
@@ -40,6 +42,7 @@ def create_collection(hrefs: Optional[List[str]] = None) -> Collection:
                             providers=COLLECTION_PROVIDERS,
                             summaries=summaries)
     collection.add_items(items)
+
     item_assets = {}
     for item in items:
         for key, asset in item.get_assets().items():
@@ -54,6 +57,10 @@ def create_collection(hrefs: Optional[List[str]] = None) -> Collection:
 
     item_assets_ext = ItemAssetsExtension.ext(collection, add_if_missing=True)
     item_assets_ext.item_assets = item_assets
+
+    scientific = ScientificExtension.ext(collection, add_if_missing=True)
+    scientific.citation = COLLECTION_CITATION
+
     return collection
 
 
