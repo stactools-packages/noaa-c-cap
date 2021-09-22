@@ -125,5 +125,42 @@
       ],
       "url": "https://coast.noaa.gov/digitalcoast/data/ccapregional.html"
     }
-  ]
+  ],
+  "summaries": {
+    "gsd": [
+      30
+    ],
+    "label:classes": [
+      {
+        "classes": [
+          "Background",
+          "Unclassified (Cloud, Shadow, etc)",
+          "High Intensity Developed",
+          "Medium Intensity Developed",
+          "Low Intensity Developed",
+          "Developed Open Space",
+          "Cultivated Land",
+          "Pasture/Hay",
+          "Grassland",
+          "Deciduous Forest",
+          "Evergreen Forest",
+          "Mixed Forest",
+          "Scrub/Shrub",
+          "Palustrine Forested Wetland",
+          "Palustrine Scrub/Shrub Wetland",
+          "Palustrine Emergent Wetland",
+          "Estuarine Forested Wetland",
+          "Estuarine Scrub/Shrub Wetland",
+          "Estuarine Emergent Wetland",
+          "Unconsolidated Shore",
+          "Bare Land",
+          "Open Water",
+          "Palustrine Aquatic Bed",
+          "Estuarine Aquatic Bed",
+          "Tundra",
+          "Snow/Ice"
+        ]
+      }
+    ]
+  }
 }

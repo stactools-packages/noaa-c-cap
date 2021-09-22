@@ -22,3 +22,15 @@ The use of standardized data and procedures assures consistency through time and
 across geographies.  C-CAP data forms the coastal expression of the National
 Land Cover Database (NLCD) and the A-16 land cover theme of the National Spatial
 Data Infrastructure.  The data are updated every 5 years."""
+LABEL_CLASSES = [
+    "Background", "Unclassified (Cloud, Shadow, etc)",
+    "High Intensity Developed", "Medium Intensity Developed",
+    "Low Intensity Developed", "Developed Open Space", "Cultivated Land",
+    "Pasture/Hay", "Grassland", "Deciduous Forest", "Evergreen Forest",
+    "Mixed Forest", "Scrub/Shrub", "Palustrine Forested Wetland",
+    "Palustrine Scrub/Shrub Wetland", "Palustrine Emergent Wetland",
+    "Estuarine Forested Wetland", "Estuarine Scrub/Shrub Wetland",
+    "Estuarine Emergent Wetland", "Unconsolidated Shore", "Bare Land",
+    "Open Water", "Palustrine Aquatic Bed", "Estuarine Aquatic Bed", "Tundra",
+    "Snow/Ice"
+]

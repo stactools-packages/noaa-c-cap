@@ -7,11 +7,11 @@ from pystac.extensions.item_assets import AssetDefinition, ItemAssetsExtension
 from pystac.extensions.label import LabelClasses, LabelExtension, LabelType
 from stactools.core import create
 
-from stactools.noaa_c_cap import Dataset, Metadata, utils
+from stactools.noaa_c_cap import Dataset, utils
 from stactools.noaa_c_cap.constants import (COLLECTION_DESCRIPTION,
                                             COLLECTION_ID, COLLECTION_KEYWORDS,
                                             COLLECTION_PROVIDERS,
-                                            COLLECTION_TITLE)
+                                            COLLECTION_TITLE, LABEL_CLASSES)
 
 logger = logging.getLogger(__name__)
 
@@ -31,6 +31,7 @@ def create_collection(hrefs: Optional[List[str]] = None) -> Collection:
     extent = Extent.from_items(items)
     summaries = Summaries.empty()
     summaries.add("gsd", list(set(item.common_metadata.gsd for item in items)))
+    summaries.add("label:classes", [{"classes": LABEL_CLASSES}])
     collection = Collection(id=COLLECTION_ID,
                             title=COLLECTION_TITLE,
                             description=COLLECTION_DESCRIPTION,
@@ -79,6 +80,15 @@ def create_item_from_dataset(dataset: Dataset) -> Item:
         int(dataset.year), 12, 31, tzinfo=datetime.timezone.utc)
     item.common_metadata.gsd = 30
     item.datetime = item.common_metadata.start_datetime
+
+    label = LabelExtension.ext(item, add_if_missing=True)
+    label.label_properties = None
+    label.label_description = "Land cover classes"
+    label.label_type = LabelType.RASTER
+    label.label_classes = [
+        LabelClasses.create(name='classes', classes=list(LABEL_CLASSES))
+    ]
+
     data = item.assets.get('data')
     assert data
     data.media_type = MediaType.GEOTIFF
@@ -88,12 +98,4 @@ def create_item_from_dataset(dataset: Dataset) -> Item:
             Asset(dataset.xml_href,
                   media_type=MediaType.XML,
                   roles=['metadata']))
-        label = LabelExtension.ext(item, add_if_missing=True)
-        metadata = Metadata(dataset.xml_href)
-        label.label_properties = None
-        label.label_description = "Land cover classes"
-        label.label_type = LabelType.RASTER
-        label.label_classes = [
-            LabelClasses.create(name='classes', classes=list(metadata.classes))
-        ]
     return item
