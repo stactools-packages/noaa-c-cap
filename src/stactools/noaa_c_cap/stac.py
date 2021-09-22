@@ -2,7 +2,7 @@ import datetime
 import logging
 from typing import List, Optional
 
-from pystac import Asset, Collection, Extent, Item, MediaType
+from pystac import Asset, Collection, Extent, Item, MediaType, Summaries
 from pystac.extensions.item_assets import AssetDefinition, ItemAssetsExtension
 from pystac.extensions.label import LabelClasses, LabelExtension, LabelType
 from stactools.core import create
@@ -29,12 +29,15 @@ def create_collection(hrefs: Optional[List[str]] = None) -> Collection:
     datasets = Dataset.from_hrefs(hrefs)
     items = [create_item_from_dataset(dataset) for dataset in datasets]
     extent = Extent.from_items(items)
+    summaries = Summaries.empty()
+    summaries.add("gsd", list(set(item.common_metadata.gsd for item in items)))
     collection = Collection(id=COLLECTION_ID,
                             title=COLLECTION_TITLE,
                             description=COLLECTION_DESCRIPTION,
                             extent=extent,
                             keywords=COLLECTION_KEYWORDS,
-                            providers=COLLECTION_PROVIDERS)
+                            providers=COLLECTION_PROVIDERS,
+                            summaries=summaries)
     collection.add_items(items)
     item_assets = {}
     for item in items:
@@ -74,6 +77,7 @@ def create_item_from_dataset(dataset: Dataset) -> Item:
         int(dataset.year), 1, 1, tzinfo=datetime.timezone.utc)
     item.common_metadata.end_datetime = datetime.datetime(
         int(dataset.year), 12, 31, tzinfo=datetime.timezone.utc)
+    item.common_metadata.gsd = 30
     item.datetime = item.common_metadata.start_datetime
     data = item.assets.get('data')
     assert data
