@@ -34,3 +34,10 @@ LABEL_CLASSES = [
     "Open Water", "Palustrine Aquatic Bed", "Estuarine Aquatic Bed", "Tundra",
     "Snow/Ice"
 ]
+COLLECTION_CITATION = (
+    "National Oceanic and Atmospheric Administration, "
+    "Office for Coastal Management. "
+    "Name of Data Set: Coastal Change Analysis Program (C-CAP) Regional Land Cover. "
+    "Charleston, SC: NOAA Office for Coastal Management. "
+    "Accessed Month Year at www.coast.noaa.gov/htdata/raster1/landcover/bulkdownload/30m_lc/."
+)
