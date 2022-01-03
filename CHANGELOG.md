@@ -8,7 +8,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - Add `read_href_modifier`
 
-## [v0.1.2] - 2021-09-22
+## [0.1.2] - 2021-09-22
 
 ### Added
 
@@ -30,7 +30,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - Nothing.
 
-## [v0.1.1] - 2021-09-20
+## [0.1.1] - 2021-09-20
+
 ### Added
 
 - Nothing
@@ -47,7 +48,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - Lints.
 
-## [v0.1.0] - 2021-09-20
+## [0.1.0] - 2021-09-20
 
 Initial commit.
 
@@ -66,3 +67,8 @@ Initial commit.
 ### Fixed
 
 - Nothing.
+
+[Unreleased]: <https://github.com/stactools-packages/noaa-c-cap/compare/v0.1.2..main>
+[0.1.2]: <https://github.com/stactools-packages/noaa-c-cap/compare/v0.1.1..v0.1.2>
+[0.1.1]: <https://github.com/stactools-packages/noaa-c-cap/compare/v0.1.0..v0.1.1>
+[0.1.0]: <https://github.com/stactools-packages/noaa-c-cap/releases/tag/v0.1.0>
