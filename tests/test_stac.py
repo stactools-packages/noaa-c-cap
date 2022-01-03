@@ -13,6 +13,7 @@ from tests import test_data
 
 
 class StacTest(unittest.TestCase):
+
     def test_create_collection(self):
         hrefs = [
             test_data.get_external_data(
@@ -61,6 +62,19 @@ class StacTest(unittest.TestCase):
         self.assertEqual(data.media_type, MediaType.GEOTIFF)
         self.assertEqual(data.roles, ['data'])
         item.validate()
+
+    def test_create_item_with_read_href_modifier(self):
+        did_it = False
+
+        def do_it(href: str) -> str:
+            nonlocal did_it
+            did_it = True
+            return href
+
+        path = test_data.get_external_data(
+            'conus_2016_ccap_landcover_20200311.tif')
+        stac.create_item(path, read_href_modifier=do_it)
+        assert did_it
 
     def test_create_item_with_xml(self):
         tiff_path = test_data.get_external_data(

@@ -9,6 +9,7 @@ from tests import test_data
 
 
 class CommandsTest(CliTestCase):
+
     def create_subcommand_functions(self):
         return [create_noaa_c_cap_command]
 

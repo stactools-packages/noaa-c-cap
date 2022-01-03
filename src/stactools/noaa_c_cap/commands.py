@@ -16,6 +16,7 @@ logger = logging.getLogger(__name__)
 
 def create_noaa_c_cap_command(cli):
     """Creates the stactools-noaa-c-cap command line utility."""
+
     @cli.group(
         "noaa-c-cap",
         short_help=("Commands for working with stactools-noaa-c-cap"),
