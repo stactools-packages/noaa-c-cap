@@ -1,4 +1,5 @@
 from pystac.provider import Provider, ProviderRole
+from pystac.extensions.file import MappingObject
 
 COLLECTION_ID = 'noaa-c-cap'
 COLLECTION_TITLE = 'C-CAP Regional Land Cover and Change'
@@ -34,6 +35,8 @@ LABEL_CLASSES = [
     "Open Water", "Palustrine Aquatic Bed", "Estuarine Aquatic Bed", "Tundra",
     "Snow/Ice"
 ]
+FILE_VALUES = list(
+    MappingObject.create([i], name) for i, name in enumerate(LABEL_CLASSES))
 COLLECTION_CITATION = (
     "National Oceanic and Atmospheric Administration, "
     "Office for Coastal Management. "

@@ -4,6 +4,7 @@ from typing import List, Optional
 
 from pystac import Asset, Collection, Extent, Item, MediaType, Summaries
 from pystac.extensions.item_assets import AssetDefinition, ItemAssetsExtension
+from pystac.extensions.file import FileExtension
 from pystac.extensions.label import LabelClasses, LabelExtension, LabelType
 from pystac.extensions.scientific import ScientificExtension
 from stactools.core import create
@@ -14,7 +15,8 @@ from stactools.noaa_c_cap.constants import (COLLECTION_CITATION,
                                             COLLECTION_DESCRIPTION,
                                             COLLECTION_ID, COLLECTION_KEYWORDS,
                                             COLLECTION_PROVIDERS,
-                                            COLLECTION_TITLE, LABEL_CLASSES)
+                                            COLLECTION_TITLE, FILE_VALUES,
+                                            LABEL_CLASSES)
 
 logger = logging.getLogger(__name__)
 
@@ -108,6 +110,10 @@ def create_item_from_dataset(
     data = item.assets.get('data')
     assert data
     data.media_type = MediaType.GEOTIFF
+
+    file = FileExtension.ext(data, add_if_missing=True)
+    file.values = FILE_VALUES
+
     if dataset.xml_href:
         item.add_asset(
             'metadata',
