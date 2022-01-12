@@ -6,8 +6,11 @@
 - Owner: @gadomski
 - Dataset homepage: http://github.com/stactools-packages/noaa-c-cap
 - STAC extensions used:
-  - [proj](https://github.com/stac-extensions/projection/)
-  - [label](https://github.com/stac-extensions/label/)
+  - [label](https://github.com/stac-extensions/label)
+  - [item-assets](https://github.com/stac-extensions/item-assets)
+  - [file](https://github.com/stac-extensions/file)
+  - [proj](https://github.com/stac-extensions/projection)
+  - [scientific](https://github.com/stac-extensions/scientific)
 - Extra fields: None
 
 Create STAC Items and Collections for NOAA C-CAP data.
