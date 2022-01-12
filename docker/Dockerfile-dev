@@ -14,4 +14,4 @@ RUN pip install -r requirements-dev.txt \
     && rm -r /opt/conda/lib/python$PYTHON_VERSION/site-packages/$DOCKER_NAMESPACE_PACKAGE_DIR
 
 COPY . ./
-RUN pip install -e .
+RUN pip uninstall -y pystac && pip install -e .
