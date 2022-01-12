@@ -6,9 +6,10 @@ from tempfile import TemporaryDirectory
 from pystac import MediaType
 from pystac.extensions.item_assets import ItemAssetsExtension
 from pystac.extensions.scientific import ScientificExtension
+from pystac.extensions.file import FileExtension
 
 from stactools.noaa_c_cap import stac
-from stactools.noaa_c_cap.constants import COLLECTION_CITATION, LABEL_CLASSES
+from stactools.noaa_c_cap.constants import COLLECTION_CITATION, LABEL_CLASSES, FILE_VALUES
 from tests import test_data
 
 
@@ -61,6 +62,12 @@ class StacTest(unittest.TestCase):
         data = item.assets['data']
         self.assertEqual(data.media_type, MediaType.GEOTIFF)
         self.assertEqual(data.roles, ['data'])
+
+        file = FileExtension.ext(data)
+        # Required because `MappingObject` does not implement __eq__
+        self.assertEqual([m.to_dict() for m in file.values],
+                         [m.to_dict() for m in FILE_VALUES])
+
         item.validate()
 
     def test_create_item_with_read_href_modifier(self):
