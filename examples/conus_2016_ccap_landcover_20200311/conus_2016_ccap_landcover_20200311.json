@@ -88,23 +88,184 @@
     {
       "rel": "root",
       "href": "../collection.json",
-      "type": "application/json"
+      "type": "application/json",
+      "title": "C-CAP Regional Land Cover and Change"
     },
     {
       "rel": "collection",
       "href": "../collection.json",
-      "type": "application/json"
+      "type": "application/json",
+      "title": "C-CAP Regional Land Cover and Change"
     },
     {
       "rel": "parent",
       "href": "../collection.json",
-      "type": "application/json"
+      "type": "application/json",
+      "title": "C-CAP Regional Land Cover and Change"
     }
   ],
   "assets": {
     "data": {
       "href": "https://coast.noaa.gov/htdata/raster1/landcover/bulkdownload/30m_lc/conus_2016_ccap_landcover_20200311.tif",
       "type": "image/tiff; application=geotiff",
+      "file:values": [
+        {
+          "values": [
+            0
+          ],
+          "summary": "Background"
+        },
+        {
+          "values": [
+            1
+          ],
+          "summary": "Unclassified (Cloud, Shadow, etc)"
+        },
+        {
+          "values": [
+            2
+          ],
+          "summary": "High Intensity Developed"
+        },
+        {
+          "values": [
+            3
+          ],
+          "summary": "Medium Intensity Developed"
+        },
+        {
+          "values": [
+            4
+          ],
+          "summary": "Low Intensity Developed"
+        },
+        {
+          "values": [
+            5
+          ],
+          "summary": "Developed Open Space"
+        },
+        {
+          "values": [
+            6
+          ],
+          "summary": "Cultivated Land"
+        },
+        {
+          "values": [
+            7
+          ],
+          "summary": "Pasture/Hay"
+        },
+        {
+          "values": [
+            8
+          ],
+          "summary": "Grassland"
+        },
+        {
+          "values": [
+            9
+          ],
+          "summary": "Deciduous Forest"
+        },
+        {
+          "values": [
+            10
+          ],
+          "summary": "Evergreen Forest"
+        },
+        {
+          "values": [
+            11
+          ],
+          "summary": "Mixed Forest"
+        },
+        {
+          "values": [
+            12
+          ],
+          "summary": "Scrub/Shrub"
+        },
+        {
+          "values": [
+            13
+          ],
+          "summary": "Palustrine Forested Wetland"
+        },
+        {
+          "values": [
+            14
+          ],
+          "summary": "Palustrine Scrub/Shrub Wetland"
+        },
+        {
+          "values": [
+            15
+          ],
+          "summary": "Palustrine Emergent Wetland"
+        },
+        {
+          "values": [
+            16
+          ],
+          "summary": "Estuarine Forested Wetland"
+        },
+        {
+          "values": [
+            17
+          ],
+          "summary": "Estuarine Scrub/Shrub Wetland"
+        },
+        {
+          "values": [
+            18
+          ],
+          "summary": "Estuarine Emergent Wetland"
+        },
+        {
+          "values": [
+            19
+          ],
+          "summary": "Unconsolidated Shore"
+        },
+        {
+          "values": [
+            20
+          ],
+          "summary": "Bare Land"
+        },
+        {
+          "values": [
+            21
+          ],
+          "summary": "Open Water"
+        },
+        {
+          "values": [
+            22
+          ],
+          "summary": "Palustrine Aquatic Bed"
+        },
+        {
+          "values": [
+            23
+          ],
+          "summary": "Estuarine Aquatic Bed"
+        },
+        {
+          "values": [
+            24
+          ],
+          "summary": "Tundra"
+        },
+        {
+          "values": [
+            25
+          ],
+          "summary": "Snow/Ice"
+        }
+      ],
       "roles": [
         "data"
       ]
@@ -125,7 +286,8 @@
   ],
   "stac_extensions": [
     "https://stac-extensions.github.io/projection/v1.0.0/schema.json",
-    "https://stac-extensions.github.io/label/v1.0.0/schema.json"
+    "https://stac-extensions.github.io/label/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.0.0/schema.json"
   ],
   "collection": "noaa-c-cap"
 }
