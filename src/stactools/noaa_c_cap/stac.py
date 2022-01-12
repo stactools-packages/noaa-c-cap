@@ -3,8 +3,8 @@ import logging
 from typing import List, Optional
 
 from pystac import Asset, Collection, Extent, Item, MediaType, Summaries
-from pystac.extensions.item_assets import AssetDefinition, ItemAssetsExtension
 from pystac.extensions.file import FileExtension
+from pystac.extensions.item_assets import AssetDefinition, ItemAssetsExtension
 from pystac.extensions.label import LabelClasses, LabelExtension, LabelType
 from pystac.extensions.scientific import ScientificExtension
 from stactools.core import create

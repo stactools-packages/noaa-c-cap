@@ -1,5 +1,5 @@
-from pystac.provider import Provider, ProviderRole
 from pystac.extensions.file import MappingObject
+from pystac.provider import Provider, ProviderRole
 
 COLLECTION_ID = 'noaa-c-cap'
 COLLECTION_TITLE = 'C-CAP Regional Land Cover and Change'
