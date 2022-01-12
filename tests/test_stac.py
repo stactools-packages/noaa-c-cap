@@ -4,12 +4,13 @@ import unittest
 from tempfile import TemporaryDirectory
 
 from pystac import MediaType
+from pystac.extensions.file import FileExtension
 from pystac.extensions.item_assets import ItemAssetsExtension
 from pystac.extensions.scientific import ScientificExtension
-from pystac.extensions.file import FileExtension
 
 from stactools.noaa_c_cap import stac
-from stactools.noaa_c_cap.constants import COLLECTION_CITATION, LABEL_CLASSES, FILE_VALUES
+from stactools.noaa_c_cap.constants import (COLLECTION_CITATION, FILE_VALUES,
+                                            LABEL_CLASSES)
 from tests import test_data
 
 
