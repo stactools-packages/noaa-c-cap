@@ -92,12 +92,12 @@ def create_item_from_dataset(
     logger.info(f"Creating STAC item from {dataset.tiff_href}")
     item = create.item(dataset.tiff_href,
                        read_href_modifier=read_href_modifier)
+    item.datetime = None
     item.common_metadata.start_datetime = datetime.datetime(
         int(dataset.year), 1, 1, tzinfo=datetime.timezone.utc)
     item.common_metadata.end_datetime = datetime.datetime(
         int(dataset.year), 12, 31, tzinfo=datetime.timezone.utc)
     item.common_metadata.gsd = 30
-    item.datetime = item.common_metadata.start_datetime
 
     label = LabelExtension.ext(item, add_if_missing=True)
     label.label_properties = None
