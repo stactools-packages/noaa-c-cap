@@ -6,9 +6,8 @@
 - Owner: @gadomski
 - Dataset homepage: http://github.com/stactools-packages/noaa-c-cap
 - STAC extensions used:
-  - [label](https://github.com/stac-extensions/label)
+  - [classification](https://github.com/stac-extensions/classification)
   - [item-assets](https://github.com/stac-extensions/item-assets)
-  - [file](https://github.com/stac-extensions/file)
   - [proj](https://github.com/stac-extensions/projection)
   - [scientific](https://github.com/stac-extensions/scientific)
 - Extra fields: None

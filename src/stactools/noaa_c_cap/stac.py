@@ -9,7 +9,9 @@ from stactools.core import create
 from stactools.core.io import ReadHrefModifier
 
 from stactools.noaa_c_cap import Dataset, utils
-from stactools.noaa_c_cap.constants import (COLLECTION_CITATION,
+from stactools.noaa_c_cap.constants import (CLASSIFICATION_CLASSES,
+                                            CLASSIFICATION_EXTENSION_HREF,
+                                            COLLECTION_CITATION,
                                             COLLECTION_DESCRIPTION,
                                             COLLECTION_ID, COLLECTION_KEYWORDS,
                                             COLLECTION_PROVIDERS,
@@ -60,6 +62,8 @@ def create_collection(hrefs: Optional[List[str]] = None) -> Collection:
     scientific = ScientificExtension.ext(collection, add_if_missing=True)
     scientific.citation = COLLECTION_CITATION
 
+    collection.stac_extensions.append(CLASSIFICATION_EXTENSION_HREF)
+
     return collection
 
 
@@ -98,6 +102,9 @@ def create_item_from_dataset(
     data = item.assets.get('data')
     assert data
     data.media_type = MediaType.GEOTIFF
+
+    item.stac_extensions.append(CLASSIFICATION_EXTENSION_HREF)
+    data.extra_fields["classification:classes"] = CLASSIFICATION_CLASSES
 
     if dataset.xml_href:
         item.add_asset(
