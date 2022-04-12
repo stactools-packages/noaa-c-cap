@@ -7,6 +7,8 @@ isort
 jupyter
 mypy
 pylint
+pytest
+pytest-cov
 sphinx
 sphinx-autobuild
 sphinx-click
