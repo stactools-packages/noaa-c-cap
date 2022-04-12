@@ -55,7 +55,7 @@ class StacTest(unittest.TestCase):
         )
         self.assertEqual(item.common_metadata.gsd, 30)
         data = item.assets["data"]
-        self.assertEqual(data.media_type, MediaType.GEOTIFF)
+        self.assertEqual(data.media_type, MediaType.COG)
         self.assertEqual(data.roles, ["data"])
 
         assert (

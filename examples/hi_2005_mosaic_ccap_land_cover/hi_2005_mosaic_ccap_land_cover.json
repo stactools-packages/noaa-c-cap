@@ -71,7 +71,7 @@
   "assets": {
     "data": {
       "href": "https://coast.noaa.gov/htdata/raster1/landcover/bulkdownload/30m_lc/hi_2005_mosaic_ccap_land_cover.tif",
-      "type": "image/tiff; application=geotiff",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
       "classification:classes": [
         {
           "value": 0,

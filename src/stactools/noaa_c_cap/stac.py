@@ -112,7 +112,7 @@ def create_item_from_dataset(
 
     data = item.assets.get("data")
     assert data
-    data.media_type = MediaType.GEOTIFF
+    data.media_type = MediaType.COG
 
     item.stac_extensions.append(CLASSIFICATION_EXTENSION_HREF)
     data.extra_fields["classification:classes"] = CLASSIFICATION_CLASSES

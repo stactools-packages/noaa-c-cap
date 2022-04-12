@@ -71,7 +71,7 @@
   "assets": {
     "data": {
       "href": "https://coast.noaa.gov/htdata/raster1/landcover/bulkdownload/30m_lc/conus_1996_ccap_landcover_20200311.tif",
-      "type": "image/tiff; application=geotiff",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
       "classification:classes": [
         {
           "value": 0,
