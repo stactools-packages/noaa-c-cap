@@ -50,9 +50,7 @@ class StacTest(unittest.TestCase):
             'conus_2016_ccap_landcover_20200311.tif')
         item = stac.create_item(path)
         self.assertEqual(item.id, 'conus_2016_ccap_landcover_20200311')
-        self.assertEqual(
-            item.datetime,
-            datetime.datetime(2016, 1, 1, tzinfo=datetime.timezone.utc))
+        assert item.datetime is None
         self.assertEqual(
             item.common_metadata.start_datetime,
             datetime.datetime(2016, 1, 1, tzinfo=datetime.timezone.utc))
