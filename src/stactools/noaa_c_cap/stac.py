@@ -9,13 +9,16 @@ from stactools.core import create
 from stactools.core.io import ReadHrefModifier
 
 from stactools.noaa_c_cap import Dataset, utils
-from stactools.noaa_c_cap.constants import (CLASSIFICATION_CLASSES,
-                                            CLASSIFICATION_EXTENSION_HREF,
-                                            COLLECTION_CITATION,
-                                            COLLECTION_DESCRIPTION,
-                                            COLLECTION_ID, COLLECTION_KEYWORDS,
-                                            COLLECTION_PROVIDERS,
-                                            COLLECTION_TITLE)
+from stactools.noaa_c_cap.constants import (
+    CLASSIFICATION_CLASSES,
+    CLASSIFICATION_EXTENSION_HREF,
+    COLLECTION_CITATION,
+    COLLECTION_DESCRIPTION,
+    COLLECTION_ID,
+    COLLECTION_KEYWORDS,
+    COLLECTION_PROVIDERS,
+    COLLECTION_TITLE,
+)
 
 logger = logging.getLogger(__name__)
 
@@ -35,26 +38,30 @@ def create_collection(hrefs: Optional[List[str]] = None) -> Collection:
     extent = Extent.from_items(items)
     summaries = Summaries.empty()
     summaries.add("gsd", list(set(item.common_metadata.gsd for item in items)))
-    collection = Collection(id=COLLECTION_ID,
-                            title=COLLECTION_TITLE,
-                            description=COLLECTION_DESCRIPTION,
-                            extent=extent,
-                            keywords=COLLECTION_KEYWORDS,
-                            providers=COLLECTION_PROVIDERS,
-                            summaries=summaries)
+    collection = Collection(
+        id=COLLECTION_ID,
+        title=COLLECTION_TITLE,
+        description=COLLECTION_DESCRIPTION,
+        extent=extent,
+        keywords=COLLECTION_KEYWORDS,
+        providers=COLLECTION_PROVIDERS,
+        summaries=summaries,
+    )
     collection.add_items(items)
 
     item_assets = {}
     for item in items:
         for key, asset in item.get_assets().items():
             asset_as_dict = asset.to_dict()
-            asset_as_dict.pop('href')
+            asset_as_dict.pop("href")
             if key not in item_assets:
                 item_assets[key] = AssetDefinition(asset_as_dict)
             elif item_assets[key].to_dict() != asset_as_dict:
-                logger.warning(f"Item Asset '{key}' does not match asset:\n"
-                               f"item_asset={item_assets[key].to_dict()}\n"
-                               f"asset={asset_as_dict}")
+                logger.warning(
+                    f"Item Asset '{key}' does not match asset:\n"
+                    f"item_asset={item_assets[key].to_dict()}\n"
+                    f"asset={asset_as_dict}"
+                )
 
     item_assets_ext = ItemAssetsExtension.ext(collection, add_if_missing=True)
     item_assets_ext.item_assets = item_assets
@@ -67,9 +74,11 @@ def create_collection(hrefs: Optional[List[str]] = None) -> Collection:
     return collection
 
 
-def create_item(tiff_href: str,
-                xml_href: Optional[str] = None,
-                read_href_modifier: Optional[ReadHrefModifier] = None) -> Item:
+def create_item(
+    tiff_href: str,
+    xml_href: Optional[str] = None,
+    read_href_modifier: Optional[ReadHrefModifier] = None,
+) -> Item:
     """Creates a STAC Item for the provided C-CAP tiff file.
 
     Args:
@@ -80,26 +89,28 @@ def create_item(tiff_href: str,
     Returns:
         Item: STAC Item object
     """
-    return create_item_from_dataset(Dataset(tiff_href=tiff_href,
-                                            xml_href=xml_href),
-                                    read_href_modifier=read_href_modifier)
+    return create_item_from_dataset(
+        Dataset(tiff_href=tiff_href, xml_href=xml_href),
+        read_href_modifier=read_href_modifier,
+    )
 
 
 def create_item_from_dataset(
-        dataset: Dataset,
-        read_href_modifier: Optional[ReadHrefModifier] = None) -> Item:
+    dataset: Dataset, read_href_modifier: Optional[ReadHrefModifier] = None
+) -> Item:
     """Creates an item from a NOAA C-CAP dataset."""
     logger.info(f"Creating STAC item from {dataset.tiff_href}")
-    item = create.item(dataset.tiff_href,
-                       read_href_modifier=read_href_modifier)
+    item = create.item(dataset.tiff_href, read_href_modifier=read_href_modifier)
     item.datetime = None
     item.common_metadata.start_datetime = datetime.datetime(
-        int(dataset.year), 1, 1, tzinfo=datetime.timezone.utc)
+        int(dataset.year), 1, 1, tzinfo=datetime.timezone.utc
+    )
     item.common_metadata.end_datetime = datetime.datetime(
-        int(dataset.year), 12, 31, tzinfo=datetime.timezone.utc)
+        int(dataset.year), 12, 31, tzinfo=datetime.timezone.utc
+    )
     item.common_metadata.gsd = 30
 
-    data = item.assets.get('data')
+    data = item.assets.get("data")
     assert data
     data.media_type = MediaType.GEOTIFF
 
@@ -108,8 +119,7 @@ def create_item_from_dataset(
 
     if dataset.xml_href:
         item.add_asset(
-            'metadata',
-            Asset(dataset.xml_href,
-                  media_type=MediaType.XML,
-                  roles=['metadata']))
+            "metadata",
+            Asset(dataset.xml_href, media_type=MediaType.XML, roles=["metadata"]),
+        )
     return item
