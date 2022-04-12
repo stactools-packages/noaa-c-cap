@@ -4,13 +4,11 @@ import unittest
 from tempfile import TemporaryDirectory
 
 from pystac import MediaType
-from pystac.extensions.file import FileExtension
 from pystac.extensions.item_assets import ItemAssetsExtension
 from pystac.extensions.scientific import ScientificExtension
 
 from stactools.noaa_c_cap import stac
-from stactools.noaa_c_cap.constants import (COLLECTION_CITATION, FILE_VALUES,
-                                            LABEL_CLASSES)
+from stactools.noaa_c_cap.constants import (COLLECTION_CITATION)
 from tests import test_data
 
 
@@ -27,10 +25,6 @@ class StacTest(unittest.TestCase):
         self.assertEqual(collection.title,
                          "C-CAP Regional Land Cover and Change")
         self.assertEqual(collection.summaries.get_list("gsd"), [30])
-        self.assertEqual(collection.summaries.get_list("label:classes"),
-                         [{
-                             "classes": LABEL_CLASSES
-                         }])
         self.assertEqual(len(list(collection.get_all_items())), 1)
 
         item_assets = ItemAssetsExtension.ext(collection)
@@ -61,11 +55,6 @@ class StacTest(unittest.TestCase):
         data = item.assets['data']
         self.assertEqual(data.media_type, MediaType.GEOTIFF)
         self.assertEqual(data.roles, ['data'])
-
-        file = FileExtension.ext(data)
-        # Required because `MappingObject` does not implement __eq__
-        self.assertEqual([m.to_dict() for m in file.values],
-                         [m.to_dict() for m in FILE_VALUES])
 
         item.validate()
 
