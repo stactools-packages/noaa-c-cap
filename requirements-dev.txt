@@ -1,3 +1,4 @@
+black
 codespell
 coverage
 editorconfig-checker
@@ -15,4 +16,3 @@ types-click
 types-setuptools
 types-pytz
 types-requests
-yapf

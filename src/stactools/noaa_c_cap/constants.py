@@ -1,17 +1,22 @@
-from pystac.extensions.file import MappingObject
 from pystac.provider import Provider, ProviderRole
 
-COLLECTION_ID = 'noaa-c-cap'
-COLLECTION_TITLE = 'C-CAP Regional Land Cover and Change'
-COLLECTION_KEYWORDS = ['landcover', 'coastal', 'change']
+COLLECTION_ID = "noaa-c-cap"
+COLLECTION_TITLE = "C-CAP Regional Land Cover and Change"
+COLLECTION_KEYWORDS = ["landcover", "coastal", "change"]
 COLLECTION_PROVIDERS = [
-    Provider(name=('National Oceanic and Atmospheric Administration, '
-                   'Office for Coastal Management'),
-             roles=[
-                 ProviderRole.LICENSOR, ProviderRole.PRODUCER,
-                 ProviderRole.PROCESSOR, ProviderRole.HOST
-             ],
-             url='https://coast.noaa.gov/digitalcoast/data/ccapregional.html')
+    Provider(
+        name=(
+            "National Oceanic and Atmospheric Administration, "
+            "Office for Coastal Management"
+        ),
+        roles=[
+            ProviderRole.LICENSOR,
+            ProviderRole.PRODUCER,
+            ProviderRole.PROCESSOR,
+            ProviderRole.HOST,
+        ],
+        url="https://coast.noaa.gov/digitalcoast/data/ccapregional.html",
+    )
 ]
 COLLECTION_DESCRIPTION = """Nationally standardized, raster-based inventories of
 land cover for the coastal areas of the U.S.  Data are derived, through the
@@ -23,7 +28,9 @@ The use of standardized data and procedures assures consistency through time and
 across geographies.  C-CAP data forms the coastal expression of the National
 Land Cover Database (NLCD) and the A-16 land cover theme of the National Spatial
 Data Infrastructure.  The data are updated every 5 years."""
-CLASSIFICATION_EXTENSION_HREF = "https://stac-extensions.github.io/classification/v1.0.0/schema.json"
+CLASSIFICATION_EXTENSION_HREF = (
+    "https://stac-extensions.github.io/classification/v1.0.0/schema.json"
+)
 CLASSIFICATION_CLASSES = [
     {
         "value": 0,

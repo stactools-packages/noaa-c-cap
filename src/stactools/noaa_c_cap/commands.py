@@ -29,19 +29,19 @@ def create_noaa_c_cap_command(cli):
         short_help="Creates a STAC collection",
     )
     @click.argument("destination")
-    @click.option('--href', '-h', multiple=True)
-    @click.option('--directory',
-                  '-d',
-                  help='Directory containing NOAA C-CAP files')
-    @click.option('--catalog-type',
-                  type=Choice([
-                      'ABSOLUTE_PUBLISHED', 'RELATIVE_PUBLISHED',
-                      'SELF_CONTAINED'
-                  ]),
-                  default='ABSOLUTE_PUBLISHED')
-    def create_collection_command(destination: str, href: Tuple[str],
-                                  directory: Optional[str],
-                                  catalog_type: CatalogType):
+    @click.option("--href", "-h", multiple=True)
+    @click.option("--directory", "-d", help="Directory containing NOAA C-CAP files")
+    @click.option(
+        "--catalog-type",
+        type=Choice(["ABSOLUTE_PUBLISHED", "RELATIVE_PUBLISHED", "SELF_CONTAINED"]),
+        default="ABSOLUTE_PUBLISHED",
+    )
+    def create_collection_command(
+        destination: str,
+        href: Tuple[str],
+        directory: Optional[str],
+        catalog_type: CatalogType,
+    ):
         """Creates a STAC Collection
         Args:
             destination (str): An HREF for the Collection JSON
@@ -50,7 +50,8 @@ def create_noaa_c_cap_command(cli):
         if directory:
             hrefs.extend(
                 os.path.join(os.path.abspath(directory), file_name)
-                for file_name in os.listdir(directory))
+                for file_name in os.listdir(directory)
+            )
         collection = stac.create_collection(hrefs=hrefs)
         collection.catalog_type = catalog_type
         collection.normalize_and_save(destination)
@@ -58,13 +59,18 @@ def create_noaa_c_cap_command(cli):
     @noaa_c_cap.command("create-item", short_help="Create a STAC item")
     @click.argument("source")
     @click.argument("destination")
-    @click.option('-x', '--xml', help='HREF to the metadata XML file.')
-    @click.option('--cogify/--no-cogify',
-                  default=False,
-                  help=('Use a Cloud-Optimized GeoTIFF version '
-                        'of the input file as the data asset.'))
-    def create_item_command(source: str, destination: str, xml: Optional[str],
-                            cogify: bool):
+    @click.option("-x", "--xml", help="HREF to the metadata XML file.")
+    @click.option(
+        "--cogify/--no-cogify",
+        default=False,
+        help=(
+            "Use a Cloud-Optimized GeoTIFF version "
+            "of the input file as the data asset."
+        ),
+    )
+    def create_item_command(
+        source: str, destination: str, xml: Optional[str], cogify: bool
+    ):
         """Creates a STAC Item
 
         Args:
@@ -75,20 +81,21 @@ def create_noaa_c_cap_command(cli):
             file as the data asset
         """
         if cogify:
-            cog = os.path.join(os.path.dirname(destination),
-                               os.path.basename(source))
+            cog = os.path.join(os.path.dirname(destination), os.path.basename(source))
             stactools.core.utils.convert.cogify(source, cog)
             source = cog
         item = stac.create_item(source, xml)
         item.save_object(dest_href=destination)
 
     @noaa_c_cap.command(
-        "download",
-        short_help="Download NOAA C-CAP data into a target directory")
+        "download", short_help="Download NOAA C-CAP data into a target directory"
+    )
     @click.argument("destination")
-    @click.option('--cogify/--no-cogify',
-                  help="Convert the .tifs to COGs after download",
-                  default=False)
+    @click.option(
+        "--cogify/--no-cogify",
+        help="Convert the .tifs to COGs after download",
+        default=False,
+    )
     def download_command(destination: str, cogify: bool) -> None:
         """Downloads the source data to a target directory.
 
@@ -101,19 +108,18 @@ def create_noaa_c_cap_command(cli):
                 file_name = os.path.basename(url)
                 final_path = os.path.join(destination, file_name)
                 print(f"Downloading {url} to {final_path}")
-                download_to_temporary_directory = cogify and os.path.splitext(
-                    file_name)[1] == '.tif'
+                download_to_temporary_directory = (
+                    cogify and os.path.splitext(file_name)[1] == ".tif"
+                )
                 if download_to_temporary_directory:
-                    download_path = os.path.join(temporary_directory,
-                                                 file_name)
+                    download_path = os.path.join(temporary_directory, file_name)
                 else:
                     download_path = final_path
-                with open(download_path, 'wb') as f:
+                with open(download_path, "wb") as f:
                     response = requests.get(url, stream=True)
                     for chunk in response.iter_content(chunk_size=1024):
                         f.write(chunk)
                 if download_to_temporary_directory:
-                    stactools.core.utils.convert.cogify(
-                        download_path, final_path)
+                    stactools.core.utils.convert.cogify(download_path, final_path)
 
     return noaa_c_cap
