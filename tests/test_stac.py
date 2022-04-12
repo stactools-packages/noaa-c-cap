@@ -8,7 +8,8 @@ from pystac.extensions.item_assets import ItemAssetsExtension
 from pystac.extensions.scientific import ScientificExtension
 
 from stactools.noaa_c_cap import stac
-from stactools.noaa_c_cap.constants import (COLLECTION_CITATION)
+from stactools.noaa_c_cap.constants import (CLASSIFICATION_CLASSES,
+                                            COLLECTION_CITATION)
 from tests import test_data
 
 
@@ -34,6 +35,8 @@ class StacTest(unittest.TestCase):
         scientific = ScientificExtension.ext(collection)
         self.assertEqual(scientific.citation, COLLECTION_CITATION)
 
+        assert "https://stac-extensions.github.io/classification/v1.0.0/schema.json" in collection.stac_extensions
+
         with TemporaryDirectory() as directory:
             collection.normalize_hrefs(
                 os.path.join(directory, 'collection.json'))
@@ -55,6 +58,9 @@ class StacTest(unittest.TestCase):
         data = item.assets['data']
         self.assertEqual(data.media_type, MediaType.GEOTIFF)
         self.assertEqual(data.roles, ['data'])
+
+        assert "https://stac-extensions.github.io/classification/v1.0.0/schema.json" in item.stac_extensions
+        assert data.extra_fields["classification:classes"] == CLASSIFICATION_CLASSES
 
         item.validate()
 

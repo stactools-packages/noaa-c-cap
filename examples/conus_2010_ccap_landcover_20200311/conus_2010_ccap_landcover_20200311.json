@@ -19,43 +19,7 @@
     "start_datetime": "2010-01-01T00:00:00Z",
     "end_datetime": "2010-12-31T00:00:00Z",
     "gsd": 30,
-    "label:properties": null,
-    "label:description": "Land cover classes",
-    "label:type": "raster",
-    "label:classes": [
-      {
-        "classes": [
-          "Background",
-          "Unclassified (Cloud, Shadow, etc)",
-          "High Intensity Developed",
-          "Medium Intensity Developed",
-          "Low Intensity Developed",
-          "Developed Open Space",
-          "Cultivated Land",
-          "Pasture/Hay",
-          "Grassland",
-          "Deciduous Forest",
-          "Evergreen Forest",
-          "Mixed Forest",
-          "Scrub/Shrub",
-          "Palustrine Forested Wetland",
-          "Palustrine Scrub/Shrub Wetland",
-          "Palustrine Emergent Wetland",
-          "Estuarine Forested Wetland",
-          "Estuarine Scrub/Shrub Wetland",
-          "Estuarine Emergent Wetland",
-          "Unconsolidated Shore",
-          "Bare Land",
-          "Open Water",
-          "Palustrine Aquatic Bed",
-          "Estuarine Aquatic Bed",
-          "Tundra",
-          "Snow/Ice"
-        ],
-        "name": "classes"
-      }
-    ],
-    "datetime": "2010-01-01T00:00:00Z"
+    "datetime": null
   },
   "geometry": {
     "type": "Polygon",
@@ -108,162 +72,134 @@
     "data": {
       "href": "https://coast.noaa.gov/htdata/raster1/landcover/bulkdownload/30m_lc/conus_2010_ccap_landcover_20200311.tif",
       "type": "image/tiff; application=geotiff",
-      "file:values": [
+      "classification:classes": [
         {
-          "values": [
-            0
-          ],
-          "summary": "Background"
+          "value": 0,
+          "description": "Background"
         },
         {
-          "values": [
-            1
-          ],
-          "summary": "Unclassified (Cloud, Shadow, etc)"
+          "value": 1,
+          "description": "Unclassified (Cloud, Shadow, etc)"
         },
         {
-          "values": [
-            2
-          ],
-          "summary": "High Intensity Developed"
+          "value": 2,
+          "description": "High Intensity Developed",
+          "color-hint": "FFFFFF"
         },
         {
-          "values": [
-            3
-          ],
-          "summary": "Medium Intensity Developed"
+          "value": 3,
+          "description": "Medium Intensity Developed",
+          "color-hint": "C1C1C1"
         },
         {
-          "values": [
-            4
-          ],
-          "summary": "Low Intensity Developed"
+          "value": 4,
+          "description": "Low Intensity Developed",
+          "color-hint": "979797"
         },
         {
-          "values": [
-            5
-          ],
-          "summary": "Developed Open Space"
+          "value": 5,
+          "description": "Developed Open Space",
+          "color-hint": "CCCA42"
         },
         {
-          "values": [
-            6
-          ],
-          "summary": "Cultivated Land"
+          "value": 6,
+          "description": "Cultivated Crops",
+          "color-hint": "4E2409"
         },
         {
-          "values": [
-            7
-          ],
-          "summary": "Pasture/Hay"
+          "value": 7,
+          "description": "Pasture/Hay",
+          "color-hint": "BCA05B"
         },
         {
-          "values": [
-            8
-          ],
-          "summary": "Grassland"
+          "value": 8,
+          "description": "Grassland/Herbaceous",
+          "color-hint": "EABB8E"
         },
         {
-          "values": [
-            9
-          ],
-          "summary": "Deciduous Forest"
+          "value": 9,
+          "description": "Deciduous Forest",
+          "color-hint": "6FEC48"
         },
         {
-          "values": [
-            10
-          ],
-          "summary": "Evergreen Forest"
+          "value": 10,
+          "description": "Evergreen Forest",
+          "color-hint": "15380A"
         },
         {
-          "values": [
-            11
-          ],
-          "summary": "Mixed Forest"
+          "value": 11,
+          "description": "Mixed Forest",
+          "color-hint": "489D48"
         },
         {
-          "values": [
-            12
-          ],
-          "summary": "Scrub/Shrub"
+          "value": 12,
+          "description": "Scrub/Shrub",
+          "color-hint": "6D6C1F"
         },
         {
-          "values": [
-            13
-          ],
-          "summary": "Palustrine Forested Wetland"
+          "value": 13,
+          "description": "Palustrine Forested Wetland",
+          "color-hint": "245A5A"
         },
         {
-          "values": [
-            14
-          ],
-          "summary": "Palustrine Scrub/Shrub Wetland"
+          "value": 14,
+          "description": "Palustrine Scrub/Shrub Wetland",
+          "color-hint": "E2742D"
         },
         {
-          "values": [
-            15
-          ],
-          "summary": "Palustrine Emergent Wetland"
+          "value": 15,
+          "description": "Palustrine Emergent Wetland (Persistent)",
+          "color-hint": "DE3BEA"
         },
         {
-          "values": [
-            16
-          ],
-          "summary": "Estuarine Forested Wetland"
+          "value": 16,
+          "description": "Estuarine Forested Wetland",
+          "color-hint": "37083B"
         },
         {
-          "values": [
-            17
-          ],
-          "summary": "Estuarine Scrub/Shrub Wetland"
+          "value": 17,
+          "description": "Estuarine Scrub/Shrub Wetland",
+          "color-hint": "631569"
         },
         {
-          "values": [
-            18
-          ],
-          "summary": "Estuarine Emergent Wetland"
+          "value": 18,
+          "description": "Estuarine Emergent Wetland",
+          "color-hint": "A028A9"
         },
         {
-          "values": [
-            19
-          ],
-          "summary": "Unconsolidated Shore"
+          "value": 19,
+          "description": "Unconsolidated Shore",
+          "color-hint": "6DEEF0"
         },
         {
-          "values": [
-            20
-          ],
-          "summary": "Bare Land"
+          "value": 20,
+          "description": "Bare Land",
+          "color-hint": "F3F050"
         },
         {
-          "values": [
-            21
-          ],
-          "summary": "Open Water"
+          "value": 21,
+          "description": "Open Water",
+          "color-hint": "000A72"
         },
         {
-          "values": [
-            22
-          ],
-          "summary": "Palustrine Aquatic Bed"
+          "value": 22,
+          "description": "Palustrine Aquatic Bed",
+          "color-hint": "0021E8"
         },
         {
-          "values": [
-            23
-          ],
-          "summary": "Estuarine Aquatic Bed"
+          "value": 23,
+          "description": "Estuarine Aquatic Bed",
+          "color-hint": "6777D4"
         },
         {
-          "values": [
-            24
-          ],
-          "summary": "Tundra"
+          "value": 24,
+          "description": "Tundra",
+          "color-hint": "F3D147"
         },
         {
-          "values": [
-            25
-          ],
-          "summary": "Snow/Ice"
+          "value": 25,
+          "description": "Perennial Ice/Snow",
+          "color-hint": "BBF7EF"
         }
       ],
       "roles": [
@@ -286,8 +222,7 @@
   ],
   "stac_extensions": [
     "https://stac-extensions.github.io/projection/v1.0.0/schema.json",
-    "https://stac-extensions.github.io/label/v1.0.0/schema.json",
-    "https://stac-extensions.github.io/file/v2.0.0/schema.json"
+    "https://stac-extensions.github.io/classification/v1.0.0/schema.json"
   ],
   "collection": "noaa-c-cap"
 }
