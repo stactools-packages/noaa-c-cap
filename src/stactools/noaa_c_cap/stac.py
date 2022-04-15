@@ -4,7 +4,7 @@ from typing import List, Optional
 
 from pystac import Asset, Collection, Extent, Item, MediaType, Summaries
 from pystac.extensions.item_assets import AssetDefinition, ItemAssetsExtension
-from pystac.extensions.raster import RasterBand, RasterExtension, DataType
+from pystac.extensions.raster import DataType, RasterBand, RasterExtension
 from pystac.extensions.scientific import ScientificExtension
 from stactools.core import create
 from stactools.core.io import ReadHrefModifier
@@ -17,9 +17,9 @@ from stactools.noaa_c_cap.constants import (
     COLLECTION_DESCRIPTION,
     COLLECTION_ID,
     COLLECTION_KEYWORDS,
+    COLLECTION_LINKS,
     COLLECTION_PROVIDERS,
     COLLECTION_TITLE,
-    COLLECTION_LINKS,
     SPATIAL_RESOLUTION,
 )
 

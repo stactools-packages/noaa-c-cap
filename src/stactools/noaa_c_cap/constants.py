@@ -1,4 +1,4 @@
-from pystac import Link, MediaType, RelType
+from pystac import Link
 from pystac.provider import Provider, ProviderRole
 
 COLLECTION_ID = "noaa-c-cap"
