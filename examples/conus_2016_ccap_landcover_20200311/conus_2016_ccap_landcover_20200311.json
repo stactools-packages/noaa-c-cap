@@ -72,6 +72,12 @@
     "data": {
       "href": "https://coast.noaa.gov/htdata/raster1/landcover/bulkdownload/30m_lc/conus_2016_ccap_landcover_20200311.tif",
       "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "raster:bands": [
+        {
+          "data_type": "uint8",
+          "spatial_resolution": 30
+        }
+      ],
       "classification:classes": [
         {
           "value": 0,
@@ -222,6 +228,7 @@
   ],
   "stac_extensions": [
     "https://stac-extensions.github.io/projection/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v1.0.0/schema.json",
     "https://stac-extensions.github.io/classification/v1.0.0/schema.json"
   ],
   "collection": "noaa-c-cap"
