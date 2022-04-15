@@ -9,6 +9,7 @@
   - [classification](https://github.com/stac-extensions/classification)
   - [item-assets](https://github.com/stac-extensions/item-assets)
   - [proj](https://github.com/stac-extensions/projection)
+  - [raster](https://github.com/stac-extensions/raster)
   - [scientific](https://github.com/stac-extensions/scientific)
 - Extra fields: None
 

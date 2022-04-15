@@ -4,6 +4,7 @@ from typing import List, Optional
 
 from pystac import Asset, Collection, Extent, Item, MediaType, Summaries
 from pystac.extensions.item_assets import AssetDefinition, ItemAssetsExtension
+from pystac.extensions.raster import RasterBand, RasterExtension, DataType
 from pystac.extensions.scientific import ScientificExtension
 from stactools.core import create
 from stactools.core.io import ReadHrefModifier
@@ -18,6 +19,8 @@ from stactools.noaa_c_cap.constants import (
     COLLECTION_KEYWORDS,
     COLLECTION_PROVIDERS,
     COLLECTION_TITLE,
+    COLLECTION_LINKS,
+    SPATIAL_RESOLUTION,
 )
 
 logger = logging.getLogger(__name__)
@@ -47,6 +50,7 @@ def create_collection(hrefs: Optional[List[str]] = None) -> Collection:
         providers=COLLECTION_PROVIDERS,
         summaries=summaries,
     )
+    collection.add_links(COLLECTION_LINKS)
     collection.add_items(items)
 
     item_assets = {}
@@ -69,6 +73,7 @@ def create_collection(hrefs: Optional[List[str]] = None) -> Collection:
     scientific = ScientificExtension.ext(collection, add_if_missing=True)
     scientific.citation = COLLECTION_CITATION
 
+    RasterExtension.add_to(collection)
     collection.stac_extensions.append(CLASSIFICATION_EXTENSION_HREF)
 
     return collection
@@ -108,11 +113,19 @@ def create_item_from_dataset(
     item.common_metadata.end_datetime = datetime.datetime(
         int(dataset.year), 12, 31, tzinfo=datetime.timezone.utc
     )
-    item.common_metadata.gsd = 30
+    item.common_metadata.gsd = SPATIAL_RESOLUTION
 
     data = item.assets.get("data")
     assert data
     data.media_type = MediaType.COG
+
+    raster = RasterExtension.ext(data, add_if_missing=True)
+    raster.bands = [
+        RasterBand.create(
+            data_type=DataType.UINT8,
+            spatial_resolution=SPATIAL_RESOLUTION,
+        )
+    ]
 
     item.stac_extensions.append(CLASSIFICATION_EXTENSION_HREF)
     data.extra_fields["classification:classes"] = CLASSIFICATION_CLASSES

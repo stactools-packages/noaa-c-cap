@@ -1,3 +1,4 @@
+from pystac import Link, MediaType, RelType
 from pystac.provider import Provider, ProviderRole
 
 COLLECTION_ID = "noaa-c-cap"
@@ -22,12 +23,31 @@ COLLECTION_DESCRIPTION = """Nationally standardized, raster-based inventories of
 land cover for the coastal areas of the U.S.  Data are derived, through the \
 Coastal Change Analysis Program, from the analysis of multiple dates of remotely \
 sensed imagery.  Two file types are available: individual dates that supply a \
-wall-to-wall map, and change files that compare one date to another.
-
-The use of standardized data and procedures assures consistency through time and \
+wall-to-wall map, and change files that compare one date to another.  The use of \
+standardized data and procedures assures consistency through time and \
 across geographies.  C-CAP data forms the coastal expression of the National \
 Land Cover Database (NLCD) and the A-16 land cover theme of the National Spatial \
 Data Infrastructure.  The data are updated every 5 years."""
+COLLECTION_LINKS = [
+    Link(
+        rel="describedby",
+        target="https://coast.noaa.gov/data/digitalcoast/pdf/ccap-product-page.pdf",
+        title="Handout - C-CAP Products",
+        media_type="application/pdf",
+    ),
+    Link(
+        rel="describedby",
+        target="https://coast.noaa.gov/data/digitalcoast/pdf/ccap-faq-regional.pdf",
+        title="Frequently Asked Questions",
+        media_type="application/pdf",
+    ),
+    Link(
+        rel="describedby",
+        target="https://coast.noaa.gov/data/digitalcoast/pdf/ccap-class-scheme-regional.pdf",
+        title="C-CAP Classification Scheme and Class Definitions",
+        media_type="application/pdf",
+    ),
+]
 CLASSIFICATION_EXTENSION_HREF = (
     "https://stac-extensions.github.io/classification/v1.0.0/schema.json"
 )
@@ -166,5 +186,6 @@ COLLECTION_CITATION = (
     "Office for Coastal Management. "
     "Name of Data Set: Coastal Change Analysis Program (C-CAP) Regional Land Cover. "
     "Charleston, SC: NOAA Office for Coastal Management. "
-    "Accessed Month Year at www.coast.noaa.gov/htdata/raster1/landcover/bulkdownload/30m_lc/."
+    "Accessed April 2022 at www.coast.noaa.gov/htdata/raster1/landcover/bulkdownload/30m_lc/."
 )
+SPATIAL_RESOLUTION = 30
