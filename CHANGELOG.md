@@ -9,6 +9,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Added
 
 - `classification` extension ([#12](https://github.com/stactools-packages/noaa-c-cap/pull/12))
+- `raster` extension and links ([#13](https://github.com/stactools-packages/noaa-c-cap/pull/13))
+- pre-commit ([#13](https://github.com/stactools-packages/noaa-c-cap/pull/13))
 
 ### Changed
 
