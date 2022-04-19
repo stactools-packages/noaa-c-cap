@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/). This project attempts to match the major and minor versions of [stactools](https://github.com/stac-utils/stactools) and increments the patch number as needed.
 
+## [Unreleased]
+
+### Fixed
+
+- Removed leftover `gsd` attribute -- it is now in `raster:bands` ([#15](https://github.com/stactools-packages/noaa-c-cap/pull/15))
+
 ## [v0.2.0] - 2022-04-18
 
 ### Added
