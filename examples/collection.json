@@ -284,10 +284,5 @@
       ],
       "url": "https://coast.noaa.gov/digitalcoast/data/ccapregional.html"
     }
-  ],
-  "summaries": {
-    "gsd": [
-      30
-    ]
-  }
+  ]
 }
