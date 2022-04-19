@@ -40,7 +40,6 @@ def create_collection(hrefs: Optional[List[str]] = None) -> Collection:
     items = [create_item_from_dataset(dataset) for dataset in datasets]
     extent = Extent.from_items(items)
     summaries = Summaries.empty()
-    summaries.add("gsd", list(set(item.common_metadata.gsd for item in items)))
     collection = Collection(
         id=COLLECTION_ID,
         title=COLLECTION_TITLE,
@@ -113,7 +112,6 @@ def create_item_from_dataset(
     item.common_metadata.end_datetime = datetime.datetime(
         int(dataset.year), 12, 31, tzinfo=datetime.timezone.utc
     )
-    item.common_metadata.gsd = SPATIAL_RESOLUTION
 
     data = item.assets.get("data")
     assert data

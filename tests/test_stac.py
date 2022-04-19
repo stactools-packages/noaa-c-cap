@@ -21,7 +21,6 @@ class StacTest(unittest.TestCase):
         collection = stac.create_collection(hrefs)
         self.assertEqual(collection.id, "noaa-c-cap")
         self.assertEqual(collection.title, "C-CAP Regional Land Cover and Change")
-        self.assertEqual(collection.summaries.get_list("gsd"), [30])
         self.assertEqual(len(list(collection.get_all_items())), 1)
 
         item_assets = ItemAssetsExtension.ext(collection)
@@ -53,7 +52,7 @@ class StacTest(unittest.TestCase):
             item.common_metadata.end_datetime,
             datetime.datetime(2016, 12, 31, tzinfo=datetime.timezone.utc),
         )
-        self.assertEqual(item.common_metadata.gsd, 30)
+        self.assertIsNone(item.common_metadata.gsd)
         data = item.assets["data"]
         self.assertEqual(data.media_type, MediaType.COG)
         self.assertEqual(data.roles, ["data"])
