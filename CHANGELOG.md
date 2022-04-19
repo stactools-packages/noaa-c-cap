@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/). This project attempts to match the major and minor versions of [stactools](https://github.com/stac-utils/stactools) and increments the patch number as needed.
 
-## [Unreleased]
+## [v0.2.1] - 2022-04-19
 
 ### Fixed
 
@@ -101,7 +101,8 @@ Initial commit.
 
 - Nothing.
 
-[Unreleased]: <https://github.com/stactools-packages/noaa-c-cap/compare/v0.2.0..main>
+[Unreleased]: <https://github.com/stactools-packages/noaa-c-cap/compare/v0.2.1..main>
+[0.2.1]: <https://github.com/stactools-packages/noaa-c-cap/compare/v0.2.0..v0.2.1>
 [0.2.0]: <https://github.com/stactools-packages/noaa-c-cap/compare/v0.1.4..v0.2.0>
 [0.1.4]: <https://github.com/stactools-packages/noaa-c-cap/compare/v0.1.3..v0.1.4>
 [0.1.3]: <https://github.com/stactools-packages/noaa-c-cap/compare/v0.1.2..v0.1.3>
