@@ -12,4 +12,4 @@ def register_plugin(registry):
 
 
 __all__ = ["Dataset"]
-__version__ = "0.2.0"
+__version__ = "0.2.1"
