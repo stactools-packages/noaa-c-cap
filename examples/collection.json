@@ -29,6 +29,12 @@
       "title": "C-CAP Classification Scheme and Class Definitions"
     },
     {
+      "rel": "license",
+      "href": "https://coast.noaa.gov/digitalcoast/data/ccapregional.html",
+      "type": "text/html",
+      "title": "C-CAP Regional Land Cover and Change"
+    },
+    {
       "rel": "item",
       "href": "./conus_1975_ccap_landcover_20200311/conus_1975_ccap_landcover_20200311.json",
       "type": "application/json"
@@ -255,6 +261,24 @@
           17.892786,
           -64.966857,
           49.471148
+        ],
+        [
+          -127.984554,
+          22.718719,
+          -64.966857,
+          49.471148
+        ],
+        [
+          -160.315986,
+          18.879215,
+          -154.706564,
+          22.271167
+        ],
+        [
+          -67.290869,
+          17.892786,
+          -65.230246,
+          18.538629
         ]
       ]
     },
@@ -263,6 +287,18 @@
         [
           "1975-01-01T00:00:00Z",
           "2016-12-31T00:00:00Z"
+        ],
+        [
+          "1975-01-01T00:00:00Z",
+          "2016-12-31T00:00:00Z"
+        ],
+        [
+          "1992-01-01T00:00:00Z",
+          "2005-12-31T00:00:00Z"
+        ],
+        [
+          "2010-01-01T00:00:00Z",
+          "2010-12-31T00:00:00Z"
         ]
       ]
     }
@@ -284,5 +320,12 @@
       ],
       "url": "https://coast.noaa.gov/digitalcoast/data/ccapregional.html"
     }
-  ]
+  ],
+  "assets": {
+    "boundary": {
+      "href": "https://coast.noaa.gov/data/digitalcoast/zip/ccap-mapping-bndry-wgs84.zip",
+      "type": "application/zip",
+      "title": "C-CAP Mapping Boundary (shp file)"
+    }
+  }
 }
