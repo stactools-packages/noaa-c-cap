@@ -51,6 +51,14 @@ def create_collection(hrefs: Optional[List[str]] = None) -> Collection:
     )
     collection.add_links(COLLECTION_LINKS)
     collection.add_items(items)
+    collection.add_asset(
+        "boundary",
+        Asset(
+            href="https://coast.noaa.gov/data/digitalcoast/zip/ccap-mapping-bndry-wgs84.zip",
+            title="C-CAP Mapping Boundary (shp file)",
+            media_type="application/zip",
+        ),
+    )
 
     item_assets = {}
     for item in items:
