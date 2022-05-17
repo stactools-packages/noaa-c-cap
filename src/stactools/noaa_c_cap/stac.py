@@ -39,6 +39,14 @@ def create_collection(hrefs: Optional[List[str]] = None) -> Collection:
     datasets = Dataset.from_hrefs(hrefs)
     items = [create_item_from_dataset(dataset) for dataset in datasets]
     extent = Extent.from_items(items)
+    for prefix in ("conus", "hi", "pr"):
+        secondary_items = [item for item in items if item.id.startswith(prefix)]
+        if secondary_items:
+            secondary_extent = Extent.from_items(secondary_items)
+            extent.spatial.bboxes.extend(secondary_extent.spatial.bboxes)
+            extent.temporal.intervals.extend(
+                secondary_extent.temporal.intervals  # type: ignore
+            )
     summaries = Summaries.empty()
     collection = Collection(
         id=COLLECTION_ID,
