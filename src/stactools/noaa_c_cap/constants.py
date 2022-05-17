@@ -47,6 +47,12 @@ COLLECTION_LINKS = [
         title="C-CAP Classification Scheme and Class Definitions",
         media_type="application/pdf",
     ),
+    Link(
+        rel="license",
+        target="https://coast.noaa.gov/digitalcoast/data/ccapregional.html",
+        title="C-CAP Regional Land Cover and Change",
+        media_type="text/html",
+    ),
 ]
 CLASSIFICATION_EXTENSION_HREF = (
     "https://stac-extensions.github.io/classification/v1.0.0/schema.json"
